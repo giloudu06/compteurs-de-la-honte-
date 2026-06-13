@@ -26,11 +26,11 @@ HTML
                 <h2 class="text-3xl font-bold text-gray-300 mb-8 uppercase text-center border-b border-gray-700 pb-6">Bilan ce jour</h2>
                 <div class="space-y-10">
                     <div>
-                        <p class="text-base uppercase text-gray-400 font-bold">Euthanasies prématurées causées par la malbouffe scorée D ou E au petfood-score ABCDE*</p>
+                        <p class="text-base uppercase text-gray-400 font-bold">Euthanasies prématurées (Malbouffe D/E)</p>
                         <p class="text-2xl font-black text-red-500 font-mono tabular-nums mt-2" id="petfood-jour">0,0000000000</p>
                     </div>
                     <div>
-                        <p class="text-base uppercase text-gray-400 font-bold">Euthanasies , toutes causes de décès confondues</p>
+                        <p class="text-base uppercase text-gray-400 font-bold">Euthanasies totales</p>
                         <p class="text-2xl font-black text-gray-100 font-mono tabular-nums mt-2" id="total-jour">0,0000000000</p>
                     </div>
                 </div>
@@ -40,11 +40,11 @@ HTML
                 <h2 class="text-3xl font-bold text-gray-300 mb-8 uppercase text-center border-b border-gray-700 pb-6">Bilan 2026</h2>
                 <div class="space-y-10">
                     <div>
-                        <p class="text-base uppercase text-gray-400 font-bold">Euthanasies prématurées causées par la malbouffe scorée D ou E au petfood-score ABCDE*</p>
+                        <p class="text-base uppercase text-gray-400 font-bold">Euthanasies prématurées (Malbouffe D/E)</p>
                         <p class="text-2xl font-black text-orange-500 font-mono tabular-nums mt-2" id="petfood-annuel">0,0000000000</p>
                     </div>
                     <div>
-                        <p class="text-base uppercase text-gray-400 font-bold">Euthanasies , toutes causes de décès confondues</p>
+                        <p class="text-base uppercase text-gray-400 font-bold">Euthanasies totales</p>
                         <p class="text-2xl font-black text-gray-100 font-mono tabular-nums mt-2" id="total-annuel">0,0000000000</p>
                     </div>
                 </div>
@@ -54,11 +54,11 @@ HTML
                 <h2 class="text-3xl font-bold text-gray-300 mb-8 uppercase text-center border-b border-gray-700 pb-6">Depuis 2025</h2>
                 <div class="space-y-10">
                     <div>
-                        <p class="text-base uppercase text-gray-400 font-bold">Euthanasies prématurées causées par la malbouffe scorée D ou E au petfood-score ABCDE*</p>
+                        <p class="text-base uppercase text-gray-400 font-bold">Euthanasies prématurées (Malbouffe D/E)</p>
                         <p class="text-2xl font-black text-yellow-500 font-mono tabular-nums mt-2" id="petfood-18mois">0,0000000000</p>
                     </div>
                     <div>
-                        <p class="text-base uppercase text-gray-400 font-bold">Euthanasies , toutes causes de décès confondues</p>
+                        <p class="text-base uppercase text-gray-400 font-bold">Euthanasies totales</p>
                         <p class="text-2xl font-black text-gray-100 font-mono tabular-nums mt-2" id="total-18mois">0,0000000000</p>
                     </div>
                 </div>
@@ -66,17 +66,16 @@ HTML
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <!-- CA Carnage -->
             <div class="bg-emerald-950/20 border border-emerald-900/50 rounded-2xl p-10">
-                <h3 class="text-lg font-bold text-emerald-400 mb-6 uppercase leading-tight">BILAN de jour,<br>Surcoût occasionné par la malbouffe</h3>
+                <h3 class="text-lg font-bold text-emerald-400 mb-6 uppercase leading-tight">Surcoût malbouffe (Jour)</h3>
                 <p class="text-3xl font-black text-emerald-500 font-mono tabular-nums" id="eco-carnage-jour">0 €</p>
             </div>
             <div class="bg-emerald-950/20 border border-emerald-900/50 rounded-2xl p-10">
-                <h3 class="text-lg font-bold text-emerald-400 mb-6 uppercase leading-tight">BILAN 2026,<br>Surcoût occasionné par la malbouffe</h3>
+                <h3 class="text-lg font-bold text-emerald-400 mb-6 uppercase leading-tight">Surcoût malbouffe (2026)</h3>
                 <p class="text-3xl font-black text-emerald-500 font-mono tabular-nums" id="eco-carnage-an">0 €</p>
             </div>
             <div class="bg-emerald-950/20 border border-emerald-900/50 rounded-2xl p-10">
-                <h3 class="text-lg font-bold text-emerald-400 mb-6 uppercase leading-tight">DEPUIS 2025,<br>Surcoût occasionné par la malbouffe</h3>
+                <h3 class="text-lg font-bold text-emerald-400 mb-6 uppercase leading-tight">Surcoût malbouffe (Depuis 2025)</h3>
                 <p class="text-3xl font-black text-emerald-500 font-mono tabular-nums" id="eco-carnage-5ans">0 €</p>
             </div>
         </div>
@@ -84,21 +83,22 @@ HTML
         <!-- Section Économies Éthiques -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div class="bg-blue-950/20 border-2 border-blue-500 rounded-2xl p-10">
-                <h3 class="text-2xl font-bold text-blue-400 mb-6 uppercase text-center">Économies réalisées (Alimentation éthique)</h3>
+                <h3 class="text-2xl font-bold text-blue-400 mb-6 uppercase text-center">Économies réalisées (Alimentation éthique A/B)</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
                     <div>
-                        <p class="text-sm text-blue-300 font-bold uppercase">Jour</p>
-                        <p class="text-2xl font-black text-blue-400 font-mono tabular-nums" id="eco-ethi-jour">0 €</p>
+                        <p class="text-xs text-blue-300 uppercase">Jour</p>
+                        <p class="text-xl font-black text-blue-400 font-mono tabular-nums" id="eco-ethi-jour">0 €</p>
                     </div>
                     <div>
-                        <p class="text-sm text-blue-300 font-bold uppercase">2026</p>
-                        <p class="text-2xl font-black text-blue-400 font-mono tabular-nums" id="eco-ethi-an">0 €</p>
+                        <p class="text-xs text-blue-300 uppercase">2026</p>
+                        <p class="text-xl font-black text-blue-400 font-mono tabular-nums" id="eco-ethi-an">0 €</p>
                     </div>
                     <div>
-                        <p class="text-sm text-blue-300 font-bold uppercase">Depuis 2025</p>
-                        <p class="text-2xl font-black text-blue-400 font-mono tabular-nums" id="eco-ethi-5ans">0 €</p>
+                        <p class="text-xs text-blue-300 uppercase">Depuis 2025</p>
+                        <p class="text-xl font-black text-blue-400 font-mono tabular-nums" id="eco-ethi-5ans">0 €</p>
                     </div>
                 </div>
+                <p class="text-blue-200 mt-6 text-sm font-bold italic text-center">Base : 150 000 membres × 500 € d'économie de soins/an = 75 M€/an (soit ~205 479 €/jour).</p>
             </div>
             <div class="bg-red-950/20 border-2 border-red-500 rounded-2xl p-10">
                 <h3 class="text-2xl font-bold text-red-400 mb-6 uppercase text-center">Cliniques sous influence (IVC/Anicura)</h3>
@@ -130,7 +130,7 @@ HTML
                 document.getElementById('petfood-jour').textContent = f_dec10.format(s_jour * c_malbouffe_sec);
                 document.getElementById('total-jour').textContent = f_dec10.format(s_jour * c_total_sec);
                 document.getElementById('petfood-annuel').textContent = f_dec10.format(s_2026 * c_malbouffe_sec);
-                document.getElementById('total-annuel').textContent = f_dec10.format(s_2026 * c_total_sec);
+                document.getElementById('total-annuel').textContent = f_dec10.format(s2026 * c_total_sec);
                 document.getElementById('petfood-18mois').textContent = f_dec10.format(s_2025 * c_malbouffe_sec);
                 document.getElementById('total-18mois').textContent = f_dec10.format(s_2025 * c_total_sec);
                 
@@ -138,7 +138,6 @@ HTML
                 document.getElementById('eco-carnage-an').textContent = f_euro.format(s_2026 * c_eco_carnage_sec);
                 document.getElementById('eco-carnage-5ans').textContent = f_euro.format(s_2025 * c_eco_carnage_sec);
                 
-                // Nouveaux compteurs économies
                 document.getElementById('eco-ethi-jour').textContent = f_euro.format(s_jour * c_economie_sec);
                 document.getElementById('eco-ethi-an').textContent = f_euro.format(s_2026 * c_economie_sec);
                 document.getElementById('eco-ethi-5ans').textContent = f_euro.format(s_2025 * c_economie_sec);
@@ -152,4 +151,5 @@ HTML
             piloter();
         </script>
     </body>
+</body>
 </html>
