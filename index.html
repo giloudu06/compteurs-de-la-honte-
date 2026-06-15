@@ -1,8 +1,13 @@
 <html lang="fr"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les Compteurs de la Honte — Petfood-score v27 Dark</title>
-    <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>L'Appel du 19 Juin — Petfood-score ABCDE®</title>
+<style>
+html,body{margin:0;padding:0;background:#0a0a0a;height:100%;overflow:hidden;}
+#WRAP{position:fixed;top:0;left:0;right:0;bottom:56px;overflow-y:auto;-webkit-overflow-scrolling:touch;}
+.PG{display:none;}
+.PG.ON{display:block;}
+
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: sans-serif; background-color: #0a0a0a; color: #e0e0e0; padding: 0; padding-bottom: 60px; }
         .header-title { font-size: 2.8rem; color: #e74c3c; font-weight: bold; text-align: center; text-transform: uppercase; margin-bottom: 0.2rem; }
@@ -246,17 +251,222 @@
         /* NOUVEAU : bouton secondaire section 01 */
         .secret-btn-2 { display: block; width: 100%; background: #4a235a; color: #c39bd3; font-size: 0.85rem; font-weight: bold; padding: 9px 16px; border-radius: 99px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.04em; text-align: center; margin-top: 8px; border: 1px solid rgba(155,89,182,0.4); }
         .secret-btn-2:hover { background: #6c3483; color: white; }
-    </style>
+    
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { padding-bottom: 60px;  font-family: sans-serif; background-color: #0a0a0a; color: #e0e0e0; padding: 0; }
+
+        /* En-tête */
+        .header-appel { background: linear-gradient(180deg, #0a0800 0%, #0d0000 100%); padding: 1.5rem 2rem; text-align: center; border-bottom: 1px solid #2a1f00; }
+        .header-page1 { font-size: 0.9rem; color: #666; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.3rem; }
+        .header-page1 a { color: #a08000; text-decoration: none; }
+        .header-page1 a:hover { color: #d4ac0d; }
+        .header-surtitre { font-size: 1.6rem; font-weight: bold; color: #d4ac0d; text-transform: uppercase; letter-spacing: 0.15em; text-shadow: 0 0 20px rgba(212,172,13,0.3); margin-bottom: 0.3rem; }
+        .header-sep { width: 80px; height: 1px; background: linear-gradient(90deg, transparent, #d4ac0d, transparent); margin: 0.6rem auto; }
+
+        .page-content { padding: 30px; max-width: 1200px; margin: 0 auto; }
+
+        /* Titre principal */
+        .main-title { font-size: 2.2rem; color: #d4ac0d; font-weight: bold; text-align: center; text-transform: uppercase; margin-bottom: 0.3rem; letter-spacing: 0.08em; }
+        .main-subtitle { font-size: 1.3rem; color: #a08000; font-weight: bold; text-align: center; margin-bottom: 1rem; font-style: italic; }
+        .main-intro { font-size: 1rem; color: #888; text-align: center; max-width: 700px; margin: 0 auto 2.5rem; line-height: 1.8; border: 1px solid #2a1f00; border-radius: 12px; padding: 1.2rem 1.8rem; background: #0d0a00; }
+        .main-intro em { color: #d4ac0d; font-style: italic; }
+
+        /* Bloc "Nous sommes de nouveau sous l'occupation" */
+        .occupation-banner { background: linear-gradient(135deg, #0d0000, #1a0000); border: 2px solid #8b0000; border-radius: 16px; padding: 1.5rem 2rem; text-align: center; margin-bottom: 2.5rem; }
+        .occupation-titre { font-size: 1.8rem; font-weight: bold; color: #cc0000; text-transform: uppercase; letter-spacing: 0.1em; line-height: 1.4; }
+        .occupation-titre span { color: #ff6666; }
+
+        /* Tableau de jeu */
+        .jeu-titre { font-size: 1.4rem; font-weight: bold; color: #d4ac0d; text-align: center; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.5rem; }
+        .jeu-consigne { font-size: 1rem; color: #888; text-align: center; font-style: italic; margin-bottom: 2rem; line-height: 1.6; }
+        .jeu-consigne strong { color: #d4ac0d; }
+
+        .colonnes { display: grid; grid-template-columns: 1fr 80px 1fr; gap: 0; margin-bottom: 3rem; }
+        .colonne { background: #0d0d0d; border: 1px solid #2a2a2a; border-radius: 16px; padding: 1.5rem; }
+        .colonne.gauche { border-color: #3a2a00; background: #0d0a00; }
+        .colonne.droite { border-color: #1a0000; background: #0d0000; }
+        .colonne-titre { font-size: 1rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.08em; text-align: center; padding-bottom: 12px; border-bottom: 1px solid; margin-bottom: 16px; }
+        .colonne.gauche .colonne-titre { color: #d4ac0d; border-color: #3a2a00; }
+        .colonne.droite .colonne-titre { color: #cc0000; border-color: #3a0000; }
+
+        .fleche-col { display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #444; }
+
+        .role-groupe { margin-bottom: 1.4rem; }
+        .role-groupe-titre { font-size: 0.9rem; font-weight: bold; color: #555; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; padding-left: 8px; border-left: 3px solid #555; }
+        .colonne.gauche .role-groupe-titre { border-color: #8b6914; color: #8b6914; }
+        .colonne.droite .role-groupe-titre { border-color: #8b0000; color: #8b0000; }
+        .role-item { font-size: 1.05rem; color: #aaa; padding: 5px 8px; margin-bottom: 4px; border-radius: 6px; line-height: 1.6; }
+        .role-item.victime { color: #ff6666; font-weight: bold; font-size: 1rem; }
+        .role-item.point-interrogation { color: #444; font-size: 1.1rem; text-align: center; padding: 8px; font-style: italic; }
+
+        /* Séparateur */
+        .separateur-section { border: none; border-top: 1px solid #2a1f00; margin: 2.5rem 0; }
+
+        /* Liste des acteurs */
+        .acteurs-intro { font-size: 1rem; color: #888; font-style: italic; text-align: center; margin-bottom: 2rem; line-height: 1.7; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .acteurs-intro strong { color: #d4ac0d; }
+
+        .acteurs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 2rem; }
+        .acteur-card { background: #111; border: 1px solid #222; border-radius: 14px; padding: 1.4rem; }
+        .acteur-card-titre { font-size: 0.85rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.8rem; padding-bottom: 8px; border-bottom: 1px solid; }
+        .acteur-card.rouge .acteur-card-titre { color: #e74c3c; border-color: #3a0000; }
+        .acteur-card.orange .acteur-card-titre { color: #f39c12; border-color: #3a1f00; }
+        .acteur-card.violet .acteur-card-titre { color: #9b59b6; border-color: #2a0a3a; }
+        .acteur-card.vert .acteur-card-titre { color: #27ae60; border-color: #0a2a15; }
+        .acteur-card.jaune .acteur-card-titre { color: #d4ac0d; border-color: #3a2a00; }
+        .acteur-card.gris .acteur-card-titre { color: #888; border-color: #2a2a2a; }
+        .acteur-item { font-size: 0.9rem; color: #aaa; padding: 3px 0; line-height: 1.6; }
+        .acteur-item::before { content: "→ "; color: #555; }
+        .acteur-card.rouge .acteur-item::before { color: #e74c3c; }
+        .acteur-card.orange .acteur-item::before { color: #f39c12; }
+        .acteur-card.violet .acteur-item::before { color: #9b59b6; }
+        .acteur-card.vert .acteur-item::before { color: #27ae60; }
+        .acteur-card.jaune .acteur-item::before { color: #d4ac0d; }
+        .acteur-item strong { color: #e0e0e0; }
+
+        /* Bloc film */
+        .film-block { background: #0a0a14; border: 2px solid #3498db; border-radius: 16px; padding: 2rem; margin-top: 2.5rem; }
+        .film-titre { font-size: 1.3rem; font-weight: bold; color: #3498db; text-transform: uppercase; margin-bottom: 0.4rem; }
+        .film-sous-titre { font-size: 0.95rem; color: #1a6ea0; font-style: italic; margin-bottom: 1.5rem; }
+        .film-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+        .film-item { background: #0d0d1a; border: 1px solid #1a2a4a; border-radius: 10px; padding: 1rem; text-align: center; }
+        .film-perso { font-size: 1rem; font-weight: bold; color: #5dade2; margin-bottom: 0.3rem; }
+        .film-role { font-size: 0.85rem; color: #666; font-style: italic; }
+
+
+        /* Bloc ressources */
+        .ressources-block { background: #0a0d14; border: 2px solid #3498db; border-radius: 16px; padding: 2rem; margin-top: 2.5rem; }
+        .ressources-titre { font-size: 1.3rem; font-weight: bold; color: #3498db; text-transform: uppercase; margin-bottom: 0.4rem; border-left: 4px solid #3498db; padding-left: 12px; }
+        .ressources-sous { font-size: 0.95rem; color: #666; font-style: italic; margin-bottom: 1.5rem; padding-left: 16px; }
+        .ressources-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+        .ressource-card { background: #0d1220; border: 1px solid #1a2a4a; border-radius: 12px; padding: 1.4rem; display: flex; flex-direction: column; }
+        .ressource-icon { font-size: 2rem; margin-bottom: 0.6rem; }
+        .ressource-titre { font-size: 1rem; font-weight: bold; color: #5dade2; margin-bottom: 0.5rem; }
+        .ressource-desc { font-size: 0.9rem; color: #888; line-height: 1.6; margin-bottom: 1rem; flex-grow: 1; }
+        .ressource-desc strong { color: #ccc; }
+        .ressource-btn { display: block; background: #2980b9; color: white; font-size: 0.88rem; font-weight: bold; padding: 10px 16px; border-radius: 99px; text-decoration: none; text-transform: uppercase; text-align: center; }
+        .ressource-btn:hover { background: #3498db; }
+        /* Boutons nav */
+        .nav-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin: 2.5rem 0; }
+        .nav-btn { display: inline-block; font-size: 0.95rem; font-weight: bold; padding: 12px 28px; border-radius: 99px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.04em; }
+        .nav-btn.or { background: #d4ac0d; color: #000; }
+        .nav-btn.or:hover { background: #f1c40f; }
+        .nav-btn.rouge { background: #8b0000; color: white; }
+        .nav-btn.rouge:hover { background: #cc0000; }
+
+
+        .nav-pages-fixe { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(10,8,0,0.95); border-top: 1px solid #2a1f00; padding: 10px 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; z-index: 9999; backdrop-filter: blur(8px); }
+        .nav-pages-fixe a { font-size: 0.85rem; font-weight: bold; padding: 8px 18px; border-radius: 99px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.04em; }
+        .nav-pages-fixe .btn-p1 { background: #333; color: #d4ac0d; border: 1px solid #d4ac0d; }
+        .nav-pages-fixe .btn-p2 { background: #d4ac0d; color: #000; }
+        .nav-pages-fixe .btn-p3 { background: #8b0000; color: white; }
+        .nav-pages-fixe .btn-p2:hover { background: #f1c40f; }
+        .nav-pages-fixe .btn-p3:hover { background: #cc0000; }
+        .page-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #2a2a2a; font-size: 0.9rem; color: #444; font-style: italic; text-align: center; line-height: 1.7; }
+    
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { padding-bottom: 60px;  font-family: sans-serif; background-color: #0a0a0a; color: #e0e0e0; padding: 0; }
+
+        /* En-tête */
+        .header-appel { background: linear-gradient(180deg, #0a0800 0%, #0d0000 100%); padding: 1.5rem 2rem; text-align: center; border-bottom: 1px solid #2a1f00; }
+        .header-page1 { font-size: 0.9rem; color: #666; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.3rem; }
+        .header-page1 a { color: #a08000; text-decoration: none; }
+        .header-page1 a:hover { color: #d4ac0d; }
+        .header-surtitre { font-size: 1.6rem; font-weight: bold; color: #d4ac0d; text-transform: uppercase; letter-spacing: 0.15em; text-shadow: 0 0 20px rgba(212,172,13,0.3); margin-bottom: 0.3rem; }
+        .header-sep { width: 80px; height: 1px; background: linear-gradient(90deg, transparent, #d4ac0d, transparent); margin: 0.6rem auto; }
+
+        .page-content { padding: 30px; max-width: 1200px; margin: 0 auto; }
+
+        /* Titre principal */
+        .main-title { font-size: 2.4rem; color: #e74c3c; font-weight: bold; text-align: center; text-transform: uppercase; margin-bottom: 0.3rem; }
+        .main-subtitle { font-size: 1.2rem; color: #8b0000; font-weight: bold; text-align: center; text-transform: uppercase; margin-bottom: 0.5rem; }
+        .main-intro { font-size: 1rem; color: #888; font-style: italic; text-align: center; max-width: 800px; margin: 0 auto 2.5rem; line-height: 1.7; border-left: 3px solid #8b0000; border-right: 3px solid #8b0000; padding: 1rem 1.5rem; }
+        .main-intro strong { color: #ccc; }
+
+        /* Fiche identité */
+        .fiche-identite { background: #140000; border: 2px solid #8b0000; border-radius: 16px; padding: 1.8rem 2rem; margin-bottom: 2.5rem; display: flex; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+        .fiche-numero { font-size: 5rem; font-weight: bold; color: rgba(139,0,0,0.15); font-family: monospace; flex-shrink: 0; line-height: 1; }
+        .fiche-content { flex: 1; min-width: 250px; }
+        .fiche-nom { font-size: 1.8rem; font-weight: bold; color: #cc0000; text-transform: uppercase; margin-bottom: 0.2rem; }
+        .fiche-titre { font-size: 1rem; color: #888; font-style: italic; margin-bottom: 1rem; }
+        .fiche-texte { font-size: 0.95rem; color: #aaa; line-height: 1.7; }
+        .fiche-texte strong { color: #e0e0e0; }
+        .fiche-texte em { color: #e74c3c; font-style: normal; }
+        .ramirez-btn { display: inline-block; margin-top: 1rem; background: #8b0000; color: white; font-size: 0.9rem; font-weight: bold; padding: 10px 22px; border-radius: 99px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.04em; }
+        .ramirez-btn:hover { background: #cc0000; }
+
+        /* Sections par type */
+        .section-title { font-size: 1.5rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; border-left: 6px solid #e74c3c; padding-left: 14px; margin: 2.5rem 0 0.3rem; color: #e74c3c; }
+        .section-subtitle { font-size: 0.95rem; color: #666; font-style: italic; padding-left: 20px; margin-bottom: 1.2rem; }
+        .section-count { display: inline-block; background: #8b0000; color: white; font-size: 0.8rem; font-weight: bold; padding: 2px 10px; border-radius: 99px; margin-left: 10px; vertical-align: middle; }
+
+        /* Grilles */
+        .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-bottom: 1rem; }
+        .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-bottom: 1rem; }
+
+        /* Cartes items */
+        .item-card { background: #141414; border: 1px solid #2a0000; border-radius: 12px; padding: 1.2rem; }
+        .item-card:hover { border-color: rgba(231,76,60,0.3); }
+        .item-num { font-size: 0.75rem; font-weight: bold; color: #555; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.3rem; }
+        .item-titre { font-size: 1rem; font-weight: bold; color: #ccc; margin-bottom: 0.4rem; line-height: 1.4; }
+        .item-detail { font-size: 0.85rem; color: #666; margin-bottom: 0.6rem; font-style: italic; }
+        .item-detail.rouge { color: #cc0000; font-style: normal; font-weight: bold; }
+        .item-detail.vert { color: #27ae60; font-style: normal; }
+        .item-lien { display: inline-block; font-size: 0.8rem; color: #e74c3c; text-decoration: none; border: 1px solid rgba(231,76,60,0.3); padding: 4px 12px; border-radius: 99px; }
+        .item-lien:hover { background: rgba(231,76,60,0.1); }
+
+        /* Carte pétition spéciale */
+        .item-card.usurpation { border-color: rgba(241,196,15,0.4); background: #1a1500; }
+        .item-card.usurpation .item-titre { color: #f1c40f; }
+        .badge-usurpation { display: inline-block; background: #b7a000; color: #000; font-size: 0.7rem; font-weight: bold; padding: 2px 8px; border-radius: 99px; margin-bottom: 0.5rem; text-transform: uppercase; }
+
+        /* Carte marque parasite */
+        .marque-parasite { background: #0d0020; border: 2px solid rgba(155,89,182,0.5); border-radius: 16px; padding: 1.8rem; margin-bottom: 2rem; }
+        .marque-parasite-titre { font-size: 1.3rem; font-weight: bold; color: #9b59b6; margin-bottom: 0.5rem; }
+        .marque-parasite-texte { font-size: 0.95rem; color: #aaa; line-height: 1.7; margin-bottom: 1rem; }
+        .marque-parasite-texte strong { color: #e0e0e0; }
+        .marque-btn { display: inline-block; background: #6c3483; color: white; font-size: 0.88rem; font-weight: bold; padding: 10px 20px; border-radius: 99px; text-decoration: none; text-transform: uppercase; }
+        .marque-btn:hover { background: #9b59b6; }
+
+        /* Bilan chiffré */
+        .bilan-block { background: #0d0000; border: 2px solid #8b0000; border-radius: 16px; padding: 2rem; margin: 2.5rem 0; }
+        .bilan-titre { font-size: 1.3rem; font-weight: bold; color: #cc0000; text-transform: uppercase; margin-bottom: 1.2rem; border-left: 4px solid #8b0000; padding-left: 12px; }
+        .bilan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; }
+        .bilan-item { text-align: center; padding: 1rem; background: #140000; border-radius: 12px; border: 1px solid #2a0000; }
+        .bilan-chiffre { font-size: 2.2rem; font-weight: bold; color: #e74c3c; margin-bottom: 0.2rem; }
+        .bilan-label { font-size: 0.8rem; color: #666; text-transform: uppercase; letter-spacing: 0.05em; }
+
+        /* Question finale */
+        .question-finale { background: #0d0000; border: 2px solid #8b0000; border-radius: 16px; padding: 2rem; margin-top: 2.5rem; text-align: center; }
+        .question-finale-titre { font-size: 1.4rem; font-weight: bold; color: #cc0000; text-transform: uppercase; margin-bottom: 1rem; }
+        .question-finale-texte { font-size: 1.1rem; color: #ccc; line-height: 1.8; margin-bottom: 1.5rem; }
+        .question-finale-texte strong { color: #ffffff; }
+        .question-finale-texte em { color: #e74c3c; font-style: normal; }
+        .question-finale-verdict { font-size: 1.3rem; font-weight: bold; color: #ff6666; padding: 1rem 2rem; border: 1px solid rgba(139,0,0,0.5); border-radius: 99px; display: inline-block; }
+
+        /* Retour page 1 */
+        .retour-btn { display: block; width: fit-content; margin: 2rem auto; background: #d4ac0d; color: #000; font-size: 1rem; font-weight: bold; padding: 14px 32px; border-radius: 99px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; }
+        .retour-btn:hover { background: #f1c40f; }
+
+
+        .nav-pages-fixe { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(10,8,0,0.95); border-top: 1px solid #2a1f00; padding: 10px 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; z-index: 9999; backdrop-filter: blur(8px); }
+        .nav-pages-fixe a { font-size: 0.85rem; font-weight: bold; padding: 8px 18px; border-radius: 99px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.04em; }
+        .nav-pages-fixe .btn-p1 { background: #333; color: #d4ac0d; border: 1px solid #d4ac0d; }
+        .nav-pages-fixe .btn-p2 { background: #d4ac0d; color: #000; }
+        .nav-pages-fixe .btn-p3 { background: #8b0000; color: white; }
+        .nav-pages-fixe .btn-p2:hover { background: #f1c40f; }
+        .nav-pages-fixe .btn-p3:hover { background: #cc0000; }
+        .page-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #2a2a2a; font-size: 0.9rem; color: #444; font-style: italic; text-align: center; line-height: 1.7; }
+    
+</style>
 </head>
 <body>
 
-    <!-- BARRE NAVIGATION FIXE -->
-    <div class="nav-pages-fixe">
-        <span style="color:#666; font-size:0.8rem; align-self:center;">⚔️ L'Appel du 19 Juin :</span>
-        <a class="btn-p1" href="#">📊 Page 1 — Les Compteurs</a>
-        <a class="btn-p2" href="appel_19_juin_page3_qui_est_qui.html">🎭 Page 2 — Qui est Qui ?</a>
-        <a class="btn-p3" href="appel_19_juin_page2_miliciens.html">🔍 Page 3 — Les Miliciens</a>
-    </div>
+<!-- PAGES -->
+<div id="WRAP">
+  <div id="PG1" class="PG ON">
 
     <!-- APPEL DU 19 JUIN — tout en haut -->
     <div class="appel-top-block">
@@ -327,35 +537,35 @@
             <div class="card-head">Bilan ce jour</div>
             <!-- MODIFICATION 4 : général en petit, pathétique en grand -->
             <div class="metric-label">Chiffre d'affaire petfood générale :</div>
-            <div class="val-general" id="c1">9 082 674 €</div>
+            <div class="val-general" id="c1">11 013 116 €</div>
             <div class="metric-ref">Réf : 13 150 685 € / jour</div>
             <hr class="separateur">
             <div class="metric-sub-label">CA petfood pathétique scorée D et E, 90% du total :</div>
-            <div class="val-pathetique" id="cp1">8 174 406 €</div>
+            <div class="val-pathetique" id="cp1">9 911 804 €</div>
             <div class="metric-sub-label">Dont TVA (20%) collectée au profit de l'état :</div>
-            <div class="metric-sub-val" style="color:#888;" id="tva1">1 634 881 €</div>
+            <div class="metric-sub-val" style="color:#888;" id="tva1">1 982 360 €</div>
         </div>
         <div class="card bg-gris">
             <div class="card-head">Bilan 2026</div>
             <div class="metric-label">Chiffre d'affaire petfood générale :</div>
-            <div class="val-general" id="c2">2 177 849 808 €</div>
+            <div class="val-general" id="c2">2 179 780 251 €</div>
             <div class="metric-ref">Réf : 4 800 000 000 € / an</div>
             <hr class="separateur">
             <div class="metric-sub-label">CA petfood pathétique scorée D et E, 90% du total :</div>
-            <div class="val-pathetique" id="cp2">1 960 064 827 €</div>
+            <div class="val-pathetique" id="cp2">1 961 802 226 €</div>
             <div class="metric-sub-label">Dont TVA (20%) collectée au profit de l'état :</div>
-            <div class="metric-sub-val" style="color:#888;" id="tva2">392 012 965 €</div>
+            <div class="metric-sub-val" style="color:#888;" id="tva2">392 360 445 €</div>
         </div>
         <div class="card bg-gris">
             <div class="card-head">Depuis 2025</div>
             <div class="metric-label">Chiffre d'affaire petfood générale :</div>
-            <div class="val-general" id="c3">6 977 849 833 €</div>
+            <div class="val-general" id="c3">6 979 780 276 €</div>
             <div class="metric-ref">Réf : 4 800 000 000 € / an</div>
             <hr class="separateur">
             <div class="metric-sub-label">CA petfood pathétique scorée D et E, 90% du total :</div>
-            <div class="val-pathetique" id="cp3">6 280 064 850 €</div>
+            <div class="val-pathetique" id="cp3">6 281 802 248 €</div>
             <div class="metric-sub-label">Dont TVA (20%) collectée au profit de l'état :</div>
-            <div class="metric-sub-val" style="color:#888;" id="tva3">1 256 012 970 €</div>
+            <div class="metric-sub-val" style="color:#888;" id="tva3">1 256 360 449 €</div>
         </div>
     </div>
 
@@ -365,28 +575,28 @@
         <div class="card bg-sang">
             <div class="card-head">Bilan ce jour</div>
             <div class="metric-label">Euthanasies toutes causes de décès confondues :</div>
-            <div class="metric-val dec10" id="total-jour">3 406,0027968037</div>
+            <div class="metric-val dec10" id="total-jour">4 129,9187214612</div>
             <div class="metric-ref">Réf : ~4 931 / jour</div>
             <div class="metric-label">Euthanasies prématurées (malbouffe scorée D ou E) :</div>
-            <div class="dec10-grand" style="color:#ff6666;" id="petfood-jour">2 270,6685312024</div>
+            <div class="dec10-grand" style="color:#ff6666;" id="petfood-jour">2 753,2791476408</div>
             <div class="metric-ref">Réf : ~3 287 / jour</div>
         </div>
         <div class="card bg-sang">
             <div class="card-head">Bilan 2026</div>
             <div class="metric-label">Euthanasies toutes causes de décès confondues :</div>
-            <div class="metric-val dec10" id="total-annuel">816 693,6740296803</div>
+            <div class="metric-val dec10" id="total-annuel">817 417,5899543379</div>
             <div class="metric-ref">Réf : 1 800 000 / an</div>
             <div class="metric-label">Euthanasies prématurées (malbouffe scorée D ou E) :</div>
-            <div class="dec10-grand" style="color:#ffaa44;" id="petfood-annuel">544 462,4493531202</div>
+            <div class="dec10-grand" style="color:#ffaa44;" id="petfood-annuel">544 945,0599695586</div>
             <div class="metric-ref">Réf : 1 200 000 / an</div>
         </div>
         <div class="card bg-sang">
             <div class="card-head">Depuis 2025</div>
             <div class="metric-label">Euthanasies toutes causes de décès confondues :</div>
-            <div class="metric-val dec10" id="total-18mois">2 616 693,6740296804</div>
+            <div class="metric-val dec10" id="total-18mois">2 617 417,5899543376</div>
             <div class="metric-ref">Réf : 9 000 000 / 5 ans</div>
             <div class="metric-label">Euthanasies prématurées (malbouffe scorée D ou E) :</div>
-            <div class="dec10-grand" style="color:#ffe066;" id="petfood-18mois">1 744 462,4493531200</div>
+            <div class="dec10-grand" style="color:#ffe066;" id="petfood-18mois">1 744 945,0599695584</div>
             <div class="metric-ref">Réf : 6 000 000 / 5 ans</div>
         </div>
     </div>
@@ -398,38 +608,38 @@
         <div class="card bg-ecarlate">
             <div class="card-head">Bilan ce jour</div>
             <div class="metric-label">Surcoût vétérinaire global lié à la malbouffe pathétique :</div>
-            <div class="metric-val-petit blanc-val" id="eco-general-jour">11 353 343&nbsp;€</div>
+            <div class="metric-val-petit blanc-val" id="eco-general-jour">13 766 396&nbsp;€</div>
             <div class="metric-ref">Réf : ~16,44 M€ / jour — 6 Mrd € / an</div>
             <hr class="separateur">
             <div class="metric-sub-label">Dont surcoût imputable à la petfood pathétique D/E :</div>
-            <div class="metric-val-grand ecarlate-val" id="eco-carnage-jour">7 947 340&nbsp;€</div>
+            <div class="metric-val-grand ecarlate-val" id="eco-carnage-jour">9 636 477&nbsp;€</div>
             <div class="metric-sub-ref">Réf : ~11,5 M€ / jour — 4,2 Mrd € / an</div>
             <div class="metric-sub-label">Dont TVA (20%) collectée au profit de l'état :</div>
-            <div class="metric-sub-val" style="color:#888;" id="tva-carnage-jour">1 589 468&nbsp;€</div>
+            <div class="metric-sub-val" style="color:#888;" id="tva-carnage-jour">1 927 295&nbsp;€</div>
         </div>
         <div class="card bg-ecarlate">
             <div class="card-head">Bilan 2026</div>
             <div class="metric-label">Surcoût vétérinaire global lié à la malbouffe pathétique :</div>
-            <div class="metric-val-petit blanc-val" id="eco-general-an">2 722 312 247&nbsp;€</div>
+            <div class="metric-val-petit blanc-val" id="eco-general-an">2 724 725 300&nbsp;€</div>
             <div class="metric-ref">Réf : 6 000 000 000 € / an</div>
             <hr class="separateur">
             <div class="metric-sub-label">Dont surcoût imputable à la petfood pathétique D/E :</div>
-            <div class="metric-val-grand ecarlate-val" id="eco-carnage-an">1 905 618 573&nbsp;€</div>
+            <div class="metric-val-grand ecarlate-val" id="eco-carnage-an">1 907 307 710&nbsp;€</div>
             <div class="metric-sub-ref">Réf : 4,2 Mrd € / an</div>
             <div class="metric-sub-label">Dont TVA (20%) collectée au profit de l'état :</div>
-            <div class="metric-sub-val" style="color:#888;" id="tva-carnage-an">381 123 715&nbsp;€</div>
+            <div class="metric-sub-val" style="color:#888;" id="tva-carnage-an">381 461 542&nbsp;€</div>
         </div>
         <div class="card bg-ecarlate">
             <div class="card-head">Depuis 2025</div>
             <div class="metric-label">Surcoût vétérinaire global lié à la malbouffe pathétique :</div>
-            <div class="metric-val-petit blanc-val" id="eco-general-5ans">8 722 312 247&nbsp;€</div>
+            <div class="metric-val-petit blanc-val" id="eco-general-5ans">8 724 725 300&nbsp;€</div>
             <div class="metric-ref">Réf : 30 Mrd € / 5 ans</div>
             <hr class="separateur">
             <div class="metric-sub-label">Dont surcoût imputable à la petfood pathétique D/E :</div>
-            <div class="metric-val-grand ecarlate-val" id="eco-carnage-5ans">6 105 618 573&nbsp;€</div>
+            <div class="metric-val-grand ecarlate-val" id="eco-carnage-5ans">6 107 307 710&nbsp;€</div>
             <div class="metric-sub-ref">Réf : 21 Mrd € / 5 ans</div>
             <div class="metric-sub-label">Dont TVA (20%) collectée au profit de l'état :</div>
-            <div class="metric-sub-val" style="color:#888;" id="tva-carnage-5ans">1 221 123 715&nbsp;€</div>
+            <div class="metric-sub-val" style="color:#888;" id="tva-carnage-5ans">1 221 461 542&nbsp;€</div>
         </div>
     </div>
 
@@ -437,9 +647,9 @@
     <div class="section-title jaune">04-2 — Les Compteurs de la Honte des taxes de l'état sur le business de ce carnage</div>
     <div class="section-subtitle jaune">TVA (20%) collectée au profit de l'état — somme des TVA section 02 + section 04-1</div>
     <div class="grid3">
-        <div class="card bg-jaune"><div class="card-head">Bilan ce jour</div><div class="metric-label">TVA totale collectée (02 + 04-1) :</div><div class="metric-val jaune-val" id="tva-total-jour">3 224 349&nbsp;€</div><div class="metric-ref">TVA 02 + TVA 04-1</div><hr class="separateur"><div class="metric-sub-label">TVA section 02 :</div><div class="metric-sub-val" style="color:#999;" id="tva1-recap-jour">1 634 881&nbsp;€</div><div class="metric-sub-label">TVA section 04-1 :</div><div class="metric-sub-val" style="color:#999;" id="tva3-recap-jour">1 589 468&nbsp;€</div></div>
-        <div class="card bg-jaune"><div class="card-head">Bilan 2026</div><div class="metric-label">TVA totale collectée (02 + 04-1) :</div><div class="metric-val jaune-val" id="tva-total-an">773 136 680&nbsp;€</div><div class="metric-ref">TVA 02 + TVA 04-1</div><hr class="separateur"><div class="metric-sub-label">TVA section 02 :</div><div class="metric-sub-val" style="color:#999;" id="tva1-recap-an">392 012 966&nbsp;€</div><div class="metric-sub-label">TVA section 04-1 :</div><div class="metric-sub-val" style="color:#999;" id="tva3-recap-an">381 123 715&nbsp;€</div></div>
-        <div class="card bg-jaune"><div class="card-head">Depuis 2025</div><div class="metric-label">TVA totale collectée (02 + 04-1) :</div><div class="metric-val jaune-val" id="tva-total-5ans">2 477 136 685&nbsp;€</div><div class="metric-ref">TVA 02 + TVA 04-1</div><hr class="separateur"><div class="metric-sub-label">TVA section 02 :</div><div class="metric-sub-val" style="color:#999;" id="tva1-recap-5ans">1 256 012 970&nbsp;€</div><div class="metric-sub-label">TVA section 04-1 :</div><div class="metric-sub-val" style="color:#999;" id="tva3-recap-5ans">1 221 123 715&nbsp;€</div></div>
+        <div class="card bg-jaune"><div class="card-head">Bilan ce jour</div><div class="metric-label">TVA totale collectée (02 + 04-1) :</div><div class="metric-val jaune-val" id="tva-total-jour">3 909 656&nbsp;€</div><div class="metric-ref">TVA 02 + TVA 04-1</div><hr class="separateur"><div class="metric-sub-label">TVA section 02 :</div><div class="metric-sub-val" style="color:#999;" id="tva1-recap-jour">1 982 361&nbsp;€</div><div class="metric-sub-label">TVA section 04-1 :</div><div class="metric-sub-val" style="color:#999;" id="tva3-recap-jour">1 927 295&nbsp;€</div></div>
+        <div class="card bg-jaune"><div class="card-head">Bilan 2026</div><div class="metric-label">TVA totale collectée (02 + 04-1) :</div><div class="metric-val jaune-val" id="tva-total-an">773 821 987&nbsp;€</div><div class="metric-ref">TVA 02 + TVA 04-1</div><hr class="separateur"><div class="metric-sub-label">TVA section 02 :</div><div class="metric-sub-val" style="color:#999;" id="tva1-recap-an">392 360 445&nbsp;€</div><div class="metric-sub-label">TVA section 04-1 :</div><div class="metric-sub-val" style="color:#999;" id="tva3-recap-an">381 461 542&nbsp;€</div></div>
+        <div class="card bg-jaune"><div class="card-head">Depuis 2025</div><div class="metric-label">TVA totale collectée (02 + 04-1) :</div><div class="metric-val jaune-val" id="tva-total-5ans">2 477 821 992&nbsp;€</div><div class="metric-ref">TVA 02 + TVA 04-1</div><hr class="separateur"><div class="metric-sub-label">TVA section 02 :</div><div class="metric-sub-val" style="color:#999;" id="tva1-recap-5ans">1 256 360 450&nbsp;€</div><div class="metric-sub-label">TVA section 04-1 :</div><div class="metric-sub-val" style="color:#999;" id="tva3-recap-5ans">1 221 461 542&nbsp;€</div></div>
     </div>
 
     <!-- SECTION 05 -->
@@ -449,17 +659,17 @@
         <div class="card bg-orange">
             <div class="card-head">Cliniques sous influence</div>
             <div class="metric-label">En France (IVC + Anicura) :</div>
-            <div class="metric-val orange-val dec10" id="cliniques-fr">331,6590866238</div>
+            <div class="metric-val orange-val dec10" id="cliniques-fr">331,7266003188</div>
             <div class="metric-ref">Réf : 330+ — IVC 280+ / Anicura 29 — progression depuis 2016</div>
             <hr class="separateur">
             <div class="metric-label">Dans le monde (IVC + Anicura) :</div>
-            <div class="metric-val orange-val dec10" id="cliniques-monde">3 116,5908662381</div>
+            <div class="metric-val orange-val dec10" id="cliniques-monde">3 117,2660031878</div>
             <div class="metric-ref">Réf : 3 100+ — IVC 2 600+ (20 pays) / Anicura 500 (15 pays)</div>
         </div>
         <div class="card bg-orange">
             <div class="card-head">Vétérinaires sous influence — Monde</div>
             <div class="metric-label">Total collaborateurs (IVC + Anicura) dans le monde :</div>
-            <div class="metric-val orange-val dec10" id="collab-monde">32 016,5908662381</div>
+            <div class="metric-val orange-val dec10" id="collab-monde">32 017,2660031878</div>
             <div class="metric-ref">Réf : 32 000+ collaborateurs — progression depuis 2016</div>
             <hr class="separateur">
             <div class="metric-sub-label">IVC Evidensia — 20 pays (Nestlé) :</div>
@@ -596,9 +806,9 @@
     <div class="section-title bleu">06 — Les Compteurs de l'espoir de la résistance éthique</div>
     <div class="section-subtitle bleu">économies réalisées grâce aux marques éthiques scorées A et B au petfood-score</div>
     <div class="grid3">
-        <div class="card bg-bleu"><div class="card-head">Bilan ce jour</div><div class="metric-label">Économies réalisées grâce à l'alimentation éthique :</div><div class="metric-val bleu-val" id="eco-ethique-jour">141 917&nbsp;€</div><div class="metric-ref">Réf : ~205 479 € / jour</div><div class="metric-sub-label">Potentiel si 100% bascule vers l'éthique :</div><div class="metric-sub-val" style="color:#5dade2;">~1,2 M€ / jour</div></div>
-        <div class="card bg-bleu"><div class="card-head">Bilan 2026</div><div class="metric-label">Économies réalisées grâce à l'alimentation éthique :</div><div class="metric-val bleu-val" id="eco-ethique-an">34 028 903&nbsp;€</div><div class="metric-ref">Réf : 75 M€ / an</div><div class="metric-sub-label">Potentiel si 100% bascule vers l'éthique :</div><div class="metric-sub-val" style="color:#5dade2;">~450 M€ / an</div></div>
-        <div class="card bg-bleu"><div class="card-head">Cumul 5 ans</div><div class="metric-label">Économies réalisées grâce à l'alimentation éthique :</div><div class="metric-val bleu-val" id="eco-ethique-5ans">109 028 903&nbsp;€</div><div class="metric-ref">Réf : 375 M€ / 5 ans</div><div class="metric-sub-label">Potentiel si 100% bascule vers l'éthique :</div><div class="metric-sub-val" style="color:#5dade2;">~2,25 Mrd € / 5 ans</div></div>
+        <div class="card bg-bleu"><div class="card-head">Bilan ce jour</div><div class="metric-label">Économies réalisées grâce à l'alimentation éthique :</div><div class="metric-val bleu-val" id="eco-ethique-jour">172 080&nbsp;€</div><div class="metric-ref">Réf : ~205 479 € / jour</div><div class="metric-sub-label">Potentiel si 100% bascule vers l'éthique :</div><div class="metric-sub-val" style="color:#5dade2;">~1,2 M€ / jour</div></div>
+        <div class="card bg-bleu"><div class="card-head">Bilan 2026</div><div class="metric-label">Économies réalisées grâce à l'alimentation éthique :</div><div class="metric-val bleu-val" id="eco-ethique-an">34 059 066&nbsp;€</div><div class="metric-ref">Réf : 75 M€ / an</div><div class="metric-sub-label">Potentiel si 100% bascule vers l'éthique :</div><div class="metric-sub-val" style="color:#5dade2;">~450 M€ / an</div></div>
+        <div class="card bg-bleu"><div class="card-head">Cumul 5 ans</div><div class="metric-label">Économies réalisées grâce à l'alimentation éthique :</div><div class="metric-val bleu-val" id="eco-ethique-5ans">109 059 066&nbsp;€</div><div class="metric-ref">Réf : 375 M€ / 5 ans</div><div class="metric-sub-label">Potentiel si 100% bascule vers l'éthique :</div><div class="metric-sub-val" style="color:#5dade2;">~2,25 Mrd € / 5 ans</div></div>
     </div>
 
     <div class="livre-or-block">
@@ -729,5 +939,923 @@
 </script>
     </div><!-- /.page-content -->
 
+</div>
+  <div id="PG2" class="PG">
+
+<!-- EN-TÊTE -->
+<div class="header-appel">
+    <div class="header-page1">
+        ⚔️ <a href="petfood_score_v34_dark.html">Page 1</a> — <a href="appel_19_juin_page2_miliciens.html">Page 2</a> ⚔️
+    </div>
+    <div class="header-surtitre">L'Appel du 19 Juin — Page 2</div>
+    <div class="header-sep"></div>
+</div>
+
+    <div class="page-content">
+
+    <!-- TITRE -->
+    <h1 class="main-title">Qui est Qui ?</h1>
+    <p class="main-subtitle">Le jeu des ressemblances</p>
+    <div class="main-intro">
+        <em>"Ceux qui ne se souviennent pas du passé sont condamnés à le répéter."</em><br>
+        (George Santayana)<br><br>
+        Toute ressemblance avec des personnes ou des entités existantes<br>ne serait évidemment que pure coïncidence.<br><br>
+        <strong>À vous de jouer.</strong>
+    </div>
+
+    <!-- BANNIÈRE OCCUPATION -->
+    <div class="occupation-banner">
+        <div class="occupation-titre">Nous sommes de <span>NOU</span>VEAU<br>sous l'Occupation</div>
+    </div>
+
+    <!-- JEU D'ASSOCIATION -->
+    <div class="jeu-titre">Jeu d'association — À toi d'associer</div>
+    <div class="jeu-consigne">Associe un élément de la colonne de <strong>DROITE</strong> à celui de la colonne de <strong>GAUCHE</strong>.<br>Sans aide. Sans indice. Le lecteur est libre de ses conclusions.</div>
+
+    <div class="colonnes">
+        <!-- COLONNE GAUCHE : Occupation allemande -->
+        <div class="colonne gauche">
+            <div class="colonne-titre">🎖️ Sous l'Occupation allemande<br><small style="font-size:0.75rem; color:#666; font-weight:normal;">(1940 — 1944)</small></div>
+
+            <div class="role-groupe">
+                <div class="role-groupe-titre">Les victimes</div>
+                <div class="role-item victime">→ Les populations opprimées</div>
+            </div>
+
+            <div class="role-groupe">
+                <div class="role-groupe-titre">Les envahisseurs</div>
+                <div class="role-item">Les troupes d'occupation allemandes — la Wehrmacht</div>
+                <div class="role-item">La Gestapo, les nazis</div>
+                <div class="role-item">La Propagandastaffel — contrôle des médias et de l'information</div>
+                <div class="role-item">L'industrie de guerre — ceux qui fabriquaient et profitaient</div>
+            </div>
+
+            <div class="role-groupe">
+                <div class="role-groupe-titre">Les figures d'autorité</div>
+                <div class="role-item">Hitler, Himmler</div>
+                <div class="role-item">Joseph Goebbels — le maître de la propagande</div>
+                <div class="role-item">Klaus Barbie — le boucher de Lyon</div>
+                <div class="role-item">Göring</div>
+                <div class="role-item">Albert Speer — le technocrate qui "ne savait pas"</div>
+                <div class="role-item">Von Stauffenberg — la dissidence interne</div>
+            </div>
+
+            <div class="role-groupe">
+                <div class="role-groupe-titre">Le gouvernement collaborateur de Vichy</div>
+                <div class="role-item">Pétain</div>
+                <div class="role-item">Daladier</div>
+                <div class="role-item">Laval</div>
+                <div class="role-item">Darlan</div>
+                <div class="role-item">René Bousquet — chef de la police de Vichy</div>
+                <div class="role-item">Les milices collaboratrices</div>
+                <div class="role-item">Les médecins collaborateurs — ceux qui ont cautionné</div>
+            </div>
+
+            <div class="role-groupe">
+                <div class="role-groupe-titre">Les profiteurs &amp; complices passifs</div>
+                <div class="role-item">Les profiteurs de guerre — entreprises qui ont prospéré sous l'Occupation</div>
+                <div class="role-item">La presse collaboratrice — journaux relayant la propagande</div>
+                <div class="role-item">Les délateurs — ceux qui dénonçaient leurs voisins à la Gestapo</div>
+                <div class="role-item">Les témoins passifs — ceux qui savaient et ne disaient rien</div>
+                <div class="role-item">Les résistants tardifs — ralliés seulement quand c'était gagné</div>
+            </div>
+
+            <div class="role-groupe">
+                <div class="role-groupe-titre">La Résistance</div>
+                <div class="role-item">Général de Gaulle</div>
+                <div class="role-item">Général Leclerc</div>
+                <div class="role-item">Le CNR — Conseil National de la Résistance</div>
+                <div class="role-item">FTP — Francs-Tireurs et Partisans</div>
+                <div class="role-item">FFI — Forces Françaises de l'Intérieur</div>
+                <div class="role-item">Les maquisards</div>
+                <div class="role-item">Les résistants anonymes de l'ombre</div>
+                <div class="role-item">Radio Londres — <em>"Les Français parlent aux Français"</em></div>
+                <div class="role-item">Les imprimeurs clandestins — faux papiers, tracts secrets</div>
+                <div class="role-item">Les passeurs — ceux qui aidaient à franchir la ligne de démarcation</div>
+                <div class="role-item">Jean Moulin</div>
+                <div class="role-item">Georges Bidault</div>
+                <div class="role-item">Lucie Aubrac</div>
+                <div class="role-item">Germaine Tillion — ethnologue déportée</div>
+                <div class="role-item">Jean Cavaillès — philosophe résistant</div>
+                <div class="role-item">Olga Bancic</div>
+                <div class="role-item">Madeleine Riffaud</div>
+                <div class="role-item">Rol-Tanguy</div>
+                <div class="role-item">Albert Mahuzier</div>
+                <div class="role-item">Pierre Brossolette</div>
+                <div class="role-item">Jean Zay</div>
+                <div class="role-item">Martin Gray — <em>Au nom de tous les miens</em></div>
+            </div>
+
+            <div class="role-groupe">
+                <div class="role-groupe-titre">La 5ème colonne</div>
+                <div class="role-item">Les infiltrés, les traîtres de l'intérieur</div>
+            </div>
+
+            <div class="role-groupe">
+                <div class="role-groupe-titre">Les contempteurs &amp; pourfendeurs de résistants</div>
+                <div class="role-item">Les <strong>rageux de comptoir</strong> — ceux qui, depuis leur tabouret, traitent les résistants de charlatans, d'imposteurs, de dictateurs et de "profs de gym"</div>
+                <div class="role-item">Les <strong>collaborateurs du dimanche</strong> — trop lâches pour choisir un camp, mais prompts à critiquer ceux qui agissent</div>
+                <div class="role-item">Les <strong>attentistes rageurs</strong> — ceux qui n'agissent pas mais jalousent et calomnient ceux qui agissent</div>
+                <div class="role-item">Les <strong>pourfendeurs de résistants</strong> — ceux qui s'attaquent à l'homme plutôt qu'aux idées</div>
+                <div class="role-item">Les <strong>sceptiques de confort</strong> — ceux qui doutent sans jamais chercher à vérifier</div>
+                <div class="role-item">Les <strong>Jean Yann du web</strong> — les collabos du clavier</div>
+                <div class="role-item" style="color:#666; font-style:italic; margin-top:10px;">Ils savent qui ils sont. Et désormais, vous aussi.</div>
+            </div>
+        </div>
+
+        <!-- FLÈCHE -->
+        <div class="fleche-col">⟺</div>
+
+        <!-- COLONNE DROITE : Occupation petfood -->
+        <div class="colonne droite">
+            <div class="colonne-titre">🐾 Sous l'Occupation de la petfood pathétique<br><small style="font-size:0.75rem; color:#666; font-weight:normal;">(aujourd'hui)</small></div>
+
+            <div class="role-groupe">
+                <div class="role-groupe-titre">Les victimes</div>
+                <div class="role-item victime" style="color:#ff6666;">→ Nos chiens et chats domestiques<br>exterminés prématurément</div>
+            </div>
+
+            <div class="role-groupe">
+                <div class="role-groupe-titre">Les mafias</div>
+                <div class="role-item">Multinationale Nestlé (Proplan, Purina) — groupe IVC Evidensia</div>
+                <div class="role-item">Multinationale Mars (Royal Canin) — groupe Anicura</div>
+                <div class="role-item">Hill's de Colgate-Palmolive</div>
+                <div class="role-item">La FEDIAF et son staff</div>
+                <div class="role-item">La FACCO et son staff</div>
+                <div class="role-item">Les laboratoires pharmaceutiques vétérinaires</div>
+            </div>
+
+            <div class="role-groupe">
+                <div class="role-groupe-titre">Les figures d'autorité</div>
+                <div class="role-item">Jacques Guérin — Président du CNOV</div>
+                <div class="role-item">Le CNOV et son staff</div>
+                <div class="role-item">Gérard Larcher — Président du Sénat</div>
+                <div class="role-item">L'État, le Ministère de l'Agriculture, la DGCCRF</div>
+            </div>
+
+            <div class="role-groupe">
+                <div class="role-groupe-titre">Les profiteurs &amp; complices passifs</div>
+                <div class="role-item">Les gérants et marques scorées D ou E</div>
+                <div class="role-item">Les cabinets vétérinaires sous influence</div>
+                <div class="role-item">Les sites de vente en ligne</div>
+                <div class="role-item">Les animaleries, les jardineries</div>
+                <div class="role-item">La presse animalière qui relaie sans questionner</div>
+                <div class="role-item">Les propriétaires qui savent et continuent d'acheter D/E</div>
+                <div class="role-item">Les vétérinaires ralliés à l'éthique... seulement quand c'est rentable</div>
+            </div>
+
+            <div class="role-groupe">
+                <div class="role-groupe-titre">Les têtes d'affiche</div>
+                <div class="role-item">Dr Charlotte Devaux</div>
+                <div class="role-item">Damien Dehon — <em>Une gamelle au top</em></div>
+                <div class="role-item">Chaîne YouTube <em>L'instant véto</em></div>
+            </div>
+
+            <div class="role-groupe">
+                <div class="role-groupe-titre">Les porte-flingues — sapeurs de réputation</div>
+                <div class="role-item">Alain Stevens</div>
+                <div class="role-item">Youky — page FB <em>ACT sac à vomis</em></div>
+            </div>
+
+            <div class="role-groupe">
+                <div class="role-groupe-titre">La Résistance</div>
+                <div class="role-item">Gilles Vouillon — <em>Diététichien et chat</em></div>
+                <div class="role-item">Le CNR de la petfood éthique</div>
+                <div class="role-item">Le groupe <em>Alertes Croquettes Toxiques</em> — 150 000 membres</div>
+                <div class="role-item">La Petfood Ethic Community (chaîne YouTube) — <em>Radio Libre</em></div>
+                <div class="role-item">Le site petfood-score.com — <em>les tracts clandestins</em></div>
+                <div class="role-item">Les membres qui partagent — <em>les passeurs</em></div>
+
+                <div class="role-item" style="color:#27ae60; font-size:0.8rem; margin-top:8px; font-weight:bold; text-transform:uppercase; letter-spacing:0.06em;">— Vétérinaires &amp; médecins lanceurs d'alerte —</div>
+                <div class="role-item">Dr Sylvia Morand — <em>"50 à 60% des consultations liées aux glucides"</em></div>
+                <div class="role-item">Dr Ariane Garber — <em>"Nos chiens et nos chats malades de leurs croquettes"</em></div>
+                <div class="role-item">Dr Joël Dehasse — <em>"Bien nourrir son chien"</em></div>
+                <div class="role-item">Dr Alessandro Prota — <em>"La santé dans la gamelle"</em></div>
+                <div class="role-item">Dr Corley — <em>"Pour en finir avec les croquettes pour chat"</em></div>
+                <div class="role-item">Dr Charles Danten — <em>"Un vétérinaire en colère"</em> (1999)</div>
+                <div class="role-item">Dr Gérard Lippert — <em>"La malbouffe ou la vie"</em> (2006)</div>
+                <div class="role-item">Dr Jutta Ziegler — <em>"Toxic Croquettes"</em> (2014)</div>
+                <div class="role-item">Dr Jérémy Anso — <em>"Ce poison nommé croquettes"</em> (2015)</div>
+                <div class="role-item">Dr Karen Becker &amp; Rodney Habib — <em>"Longue vie à mon chien"</em></div>
+                <div class="role-item">Dr Tom Lonsdale — <em>"La fraude alimentaire pour les animaux de compagnie"</em></div>
+
+                <div class="role-item" style="color:#27ae60; font-size:0.8rem; margin-top:8px; font-weight:bold; text-transform:uppercase; letter-spacing:0.06em;">— Journalistes, enquêteurs &amp; auteurs —</div>
+                <div class="role-item">Sylvia Kramer — <em>"Stop ! À la malbouffe"</em> (2012)</div>
+                <div class="role-item">Morgane Cargo (journaliste) — <em>"Vous êtes fous de leur faire avaler ça"</em></div>
+                <div class="role-item">Gilles Lartigot &amp; Valérie Baccon (naturopathe animale) — <em>"CROQUEAT — L'Empire des croquettes"</em> (2025)</div>
+                <div class="role-item">Prune Arnaud (ostéopathe canin) — <em>"Rééduquez vos vétérinaires et vos médecins"</em></div>
+
+                <div class="role-item" style="color:#27ae60; font-size:0.8rem; margin-top:8px; font-weight:bold; text-transform:uppercase; letter-spacing:0.06em;">— Naturopathes, YouTubeurs &amp; communautés —</div>
+                <div class="role-item">Aurore Naturopathe et sa Team Naturo-chiens et chats</div>
+                <div class="role-item">Camille Fouard — chaîne YouTube <em>Healthy Pets</em></div>
+                <div class="role-item">Coline Doebelin — <em>The Little Carnivore</em> — nutritionniste féline, MSc nutrition animale (Université de Glasgow), site &amp; chaîne YouTube spécialisés alimentation crue pour chats</div>
+                <div class="role-item">Céline Ramassamy — <em>Nos Toutous et Nous</em> — nutrition et naturopathie animale — <a href="https://nostoutousetnous.fr" target="_blank" style="color:#27ae60;">nostoutousetnous.fr</a></div>
+                <div class="role-item">Djésia Amone — <em>Barf Asso</em></div>
+                <div class="role-item">Tous les barfeurs du net et de YouTube — <em>résistants anonymes de l'alimentation naturelle</em></div>
+
+                <div class="role-item" style="color:#27ae60; font-size:0.8rem; margin-top:8px; font-weight:bold; text-transform:uppercase; letter-spacing:0.06em;">— Figures politiques antilobby —</div>
+                <div class="role-item">Michèle Rivasi — <em>députée européenne antilobby</em></div>
+
+                <div class="role-item" style="color:#27ae60; font-size:0.8rem; margin-top:8px; font-weight:bold; text-transform:uppercase; letter-spacing:0.06em;">— Gérants de marques éthiques —</div>
+                <div class="role-item">Pierre-François Moulin — <em>Maison Moulin</em></div>
+                <div class="role-item">Patrice Le Rest — <em>Natural Breed</em></div>
+                <div class="role-item">Fabrice Olivo — <em>Jacques et Dolly</em></div>
+                <div class="role-item">Anne — <em>Le Délit-Cat</em></div>
+                <div class="role-item">Barbara — <em>My Pattoune</em></div>
+                <div class="role-item" style="color:#555; font-style:italic;">→ Et tous les gérants de marques scorées A ou B — résistants anonymes de l'ombre dont les noms restent encore à découvrir...</div>
+            </div>
+
+            <div class="role-groupe">
+                <div class="role-groupe-titre">Les rageux &amp; contempteurs de résistants</div>
+                <div class="role-item">Ceux qui traitent Gilles Vouillon de <strong>charlatan</strong></div>
+                <div class="role-item">Ceux qui l'appellent <strong>"prof de gym"</strong> pour nier sa légitimité</div>
+                <div class="role-item">Ceux qui crient à <strong>l'imposture</strong> sans jamais vérifier les données</div>
+                <div class="role-item">Ceux qui l'accusent d'être un <strong>dictateur</strong> parce qu'il modère son groupe</div>
+                <div class="role-item">Les <strong>haineux anonymes</strong> des groupes adverses</div>
+                <div class="role-item">La page FB <strong><em>ACT sac à vomis</em></strong> et ses administrateurs</div>
+                <div class="role-item" style="color:#666; font-style:italic; margin-top:10px;">Ils savent qui ils sont. Et désormais, vous aussi.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOC FILM -->
+    <div class="film-block">
+        <div class="film-titre">🎬 Personnages de film</div>
+        <div class="film-sous-titre">Référence : <em>Papy fait de la résistance</em> (1983)</div>
+        <div class="film-grid">
+            <div class="film-item">
+                <div class="film-perso">Jean Yann</div>
+                <div class="film-role">Le collabo enthousiaste</div>
+            </div>
+            <div class="film-item">
+                <div class="film-perso">Adolfo Ramirez</div>
+                <div class="film-role">Le collabo professionnel</div>
+            </div>
+            <div class="film-item">
+                <div class="film-perso">Super Résistant</div>
+                <div class="film-role">Le héros de la résistance</div>
+            </div>
+            <div class="film-item">
+                <div class="film-perso">Le Général Spountz</div>
+                <div class="film-role">Le méchant gentil</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- BLOC RESSOURCES -->
+    <div class="ressources-block">
+        <div class="ressources-titre">📚 Les ressources de la Résistance</div>
+        <div class="ressources-sous">Ce que Big Petfood et les lobbies ne veulent pas que vous consultiez</div>
+        <div class="ressources-grid">
+
+            <div class="ressource-card">
+                <div class="ressource-icon">📖</div>
+                <div class="ressource-titre">La Bibliographie interdite</div>
+                <div class="ressource-desc">
+                    <strong>19 livres référencés</strong> — de 1999 à 2025 — écrits par des vétérinaires lanceurs d'alerte, journalistes d'investigation et chercheurs indépendants.<br><br>
+                    Des ouvrages que vous ne trouverez <strong>jamais affichés dans une école vétérinaire</strong>. Financées par Royal Canin, Hill's et Purina, ces écoles maintiennent l'omerta.
+                </div>
+                <a class="ressource-btn" href="https://petfood-score.com/bibliographie/" target="_blank">📚 Consulter la bibliographie →</a>
+            </div>
+
+            <div class="ressource-card">
+                <div class="ressource-icon">🤝</div>
+                <div class="ressource-titre">Les Résistants identifiés — Partenaires &amp; Communauté</div>
+                <div class="ressource-desc">
+                    Les <strong>marques, boutiques, éleveurs et professionnels</strong> qui ont choisi le bon camp — ceux qui affichent fièrement le label Petfood-Score ABCDE® et s'engagent pour une alimentation transparente.<br><br>
+                    Natural Breed, Maison Moulin, Jack &amp; Dolly et bien d'autres <strong>résistants de la petfood éthique</strong>.
+                </div>
+                <a class="ressource-btn" href="https://petfood-score.com/partenaires-du-petfood-score-abcde/" target="_blank">🐾 Voir les partenaires →</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="nav-btns">
+        <a class="nav-btn or" href="petfood_score_v34_dark.html">← Page 1 — L'Appel du 19 Juin</a>
+        <a class="nav-btn rouge" href="appel_19_juin_page2_miliciens.html">← Page 3 — Les Agents de la Contre-Résistance</a>
+    </div>
+
+    <div class="page-footer">
+        Page 3 de l'Appel du 19 Juin — Fait à Castres le 15 juin 2026 — Tous droits réservés.<br>
+        Toute ressemblance avec des personnes ou des entités existantes ne serait que pure coïncidence.<br>
+        Autorisation est donnée de partager cette page à la condition qu'aucune modification ne soit apportée.
+    </div>
+
+</div>
+</div>
+  <div id="PG3" class="PG">
+
+<!-- EN-TÊTE -->
+<div class="header-appel">
+    <div class="header-page1">⚔️ <a href="appel_19_juin_page1.html">L'Appel du 19 Juin — Page 1</a> ⚔️</div>
+    <div class="header-surtitre">L'Appel du 19 Juin — Page 3</div>
+    <div class="header-sep"></div>
+</div>
+
+    <div class="page-content">
+
+    <h1 class="main-title">Les Agents de la Contre-Résistance</h1>
+    <p class="main-subtitle">Coup de projecteur sur un milicien</p>
+    <div class="main-intro">
+        Dans toute résistance, il existe des <strong>collaborateurs</strong> qui œuvrent pour le compte de l'occupant — consciemment ou non. Ici, nous documentons factuellement les actions d'un <strong>sapeur de réputation professionnel</strong> qui, depuis des années, cherche à <em>invisibiliser et discréditer</em> le travail de Gilles Vouillon et du Petfood-score ABCDE®.<br><br>
+        Tous les éléments présentés ici sont <strong>publiquement vérifiables</strong> via les liens fournis.
+    </div>
+
+    <!-- FICHE IDENTITÉ -->
+    <div class="fiche-identite">
+        <div class="fiche-numero">01</div>
+        <div class="fiche-content">
+            <div class="fiche-nom">Alain Stevens</div>
+            <div class="fiche-titre">Sapeur de réputation professionnel — Le « Adolfo Ramirez » de la croquette</div>
+            <div class="fiche-texte">
+                Depuis plusieurs années, Alain Stevens mène une campagne systématique et organisée visant à <em>invisibiliser et discréditer</em> Gilles Vouillon et son Petfood-score ABCDE®.<br><br>
+                Son arsenal : <strong>15 chaînes YouTube</strong>, <strong>13 groupes Facebook</strong>, <strong>10 pages Facebook</strong>, <strong>9 pétitions</strong>, <strong>3 blogs</strong>, <strong>6 livres Amazon</strong>, des comptes Instagram, TikTok et Twitter — tous conçus pour <strong>saturer les résultats Google</strong> et noyer le travail de la résistance éthique.<br><br>
+                La question que tout le monde se pose : <em>« T'es payé par qui, et combien ? »</em>
+            </div>
+            <a class="ramirez-btn" href="https://www.youtube.com/watch?v=gXCpvYo8xpo" target="_blank">▶ Qui est Adolfo Ramirez ? — La référence internationale</a>
+        </div>
+    </div>
+
+    <!-- MARQUE PARASITE -->
+    <div class="marque-parasite">
+        <div class="marque-parasite-titre">🔴 La Marque Parasite — Petfood-score PACTA</div>
+        <div class="marque-parasite-texte">
+            En 2023, Alain Stevens a déposé à l'INPI la marque <strong>« Petfood-score PACTA »</strong> — une copie parasitaire délibérée de la marque <strong>Petfood-score ABCDE®</strong> déposée par Gilles Vouillon.<br><br>
+            Objectif : créer la confusion dans l'esprit du public, polluer les résultats de recherche, et usurper la notoriété du travail de la résistance éthique.
+        </div>
+        <a class="marque-btn" href="https://data.inpi.fr/marques/FR4944235?q=#FR4944235" target="_blank">🔍 Voir le dépôt INPI — FR4944235</a>
+    </div>
+
+    <!-- BILAN CHIFFRÉ -->
+    <div class="bilan-block">
+        <div class="bilan-titre">Bilan de l'arsenal de la contre-résistance</div>
+        <div class="bilan-grid">
+            <div class="bilan-item"><div class="bilan-chiffre">15</div><div class="bilan-label">Chaînes YouTube</div></div>
+            <div class="bilan-item"><div class="bilan-chiffre">13</div><div class="bilan-label">Groupes Facebook</div></div>
+            <div class="bilan-item"><div class="bilan-chiffre">10</div><div class="bilan-label">Pages Facebook</div></div>
+            <div class="bilan-item"><div class="bilan-chiffre">9</div><div class="bilan-label">Pétitions</div></div>
+            <div class="bilan-item"><div class="bilan-chiffre">6</div><div class="bilan-label">Livres Amazon</div></div>
+            <div class="bilan-item"><div class="bilan-chiffre">3</div><div class="bilan-label">Blogs</div></div>
+            <div class="bilan-item"><div class="bilan-chiffre">1</div><div class="bilan-label">Marque parasite INPI</div></div>
+            <div class="bilan-item"><div class="bilan-chiffre">12 676</div><div class="bilan-label">Signatures usurpées</div></div>
+        </div>
+    </div>
+
+    <!-- SECTION 1 : CHAÎNES YOUTUBE -->
+    <div class="section-title">Chaînes YouTube <span class="section-count">15 chaînes</span></div>
+    <div class="section-subtitle">Saturation des résultats de recherche Google — quasi-totalité des chaînes quasi-vides</div>
+    <div class="grid3">
+        <div class="item-card">
+            <div class="item-num">01</div>
+            <div class="item-titre">Petfood Advisor francophone - Nutrition animale</div>
+            <div class="item-detail rouge">176 vidéos — la plus active</div>
+            <a class="item-lien" href="https://www.youtube.com/@petfood-advisor-fr" target="_blank">Voir la chaîne →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">02</div>
+            <div class="item-titre">Les outils d'édition du Petfood-Score Pacta</div>
+            <div class="item-detail">8 vidéos</div>
+            <a class="item-lien" href="https://www.youtube.com/@petfood-score-publisher" target="_blank">Voir la chaîne →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">03</div>
+            <div class="item-titre">Toxic Petfood</div>
+            <div class="item-detail">1 vidéo</div>
+            <a class="item-lien" href="https://www.youtube.com/@toxic-petfood/videos" target="_blank">Voir la chaîne →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">04</div>
+            <div class="item-titre">Pacta Publisher - Petfood-Score</div>
+            <div class="item-detail">20 vidéos</div>
+            <a class="item-lien" href="https://www.youtube.com/@petfood-score.edition" target="_blank">Voir la chaîne →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">05</div>
+            <div class="item-titre">Alain STEVENS - Vigiscore</div>
+            <div class="item-detail">0 vidéo</div>
+            <a class="item-lien" href="https://www.youtube.com/@vigiscore/playlists" target="_blank">Voir la chaîne →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">06</div>
+            <div class="item-titre">Petfood-Score ABCD - Pacta Petfood</div>
+            <div class="item-detail">8 vidéos</div>
+            <a class="item-lien" href="https://www.youtube.com/@petfood-score-abcd/about" target="_blank">Voir la chaîne →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">07</div>
+            <div class="item-titre">Petfood-Score ABCDE Pacta</div>
+            <div class="item-detail">6 vidéos</div>
+            <a class="item-lien" href="https://www.youtube.com/@petfood-score-ABCDE/videos" target="_blank">Voir la chaîne →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">08</div>
+            <div class="item-titre">Petfood-Score Pacta 2019</div>
+            <div class="item-detail">4 vidéos</div>
+            <a class="item-lien" href="https://www.youtube.com/@petfood-score-2019" target="_blank">Voir la chaîne →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">09</div>
+            <div class="item-titre">Petfood-Score Pacta Petfood</div>
+            <div class="item-detail">1 vidéo</div>
+            <a class="item-lien" href="https://www.youtube.com/@petfood.score.pacta.petfood" target="_blank">Voir la chaîne →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">10</div>
+            <div class="item-titre">Alertes croquettes - Petfood Advisor</div>
+            <div class="item-detail rouge">Usurpation du nom "Alertes croquettes" — 3 vidéos</div>
+            <a class="item-lien" href="https://www.youtube.com/@alertes.croquettes" target="_blank">Voir la chaîne →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">11</div>
+            <div class="item-titre">Petfood Academy FR</div>
+            <div class="item-detail">0 vidéo</div>
+            <a class="item-lien" href="https://www.youtube.com/channel/UCU6sFrOsnaKVO4e01rmYpPA" target="_blank">Voir la chaîne →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">12</div>
+            <div class="item-titre">Petfood Academy EN</div>
+            <div class="item-detail">1 vidéo</div>
+            <a class="item-lien" href="https://www.youtube.com/channel/UCoWzVd0HS_7muaLe8ARuGNg/videos" target="_blank">Voir la chaîne →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">13</div>
+            <div class="item-titre">Soutien au Petfood-Score Pacta</div>
+            <div class="item-detail">15 vidéos</div>
+            <a class="item-lien" href="https://www.youtube.com/@soutien-au-petfood-score-pacta/videos" target="_blank">Voir la chaîne →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">14</div>
+            <div class="item-titre">Pet Food Advisor</div>
+            <div class="item-detail">16 vidéos</div>
+            <a class="item-lien" href="https://www.youtube.com/@petfoodadvisor1036" target="_blank">Voir la chaîne →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">15</div>
+            <div class="item-titre">Alain Stevens</div>
+            <div class="item-detail">4 vidéos</div>
+            <a class="item-lien" href="https://www.youtube.com/@AlainStevens/search?query=croquettes" target="_blank">Voir la chaîne →</a>
+        </div>
+    </div>
+
+    <!-- SECTION 2 : GROUPES FACEBOOK -->
+    <div class="section-title">Groupes Facebook <span class="section-count">13 groupes</span></div>
+    <div class="section-subtitle">Pollution des recherches Facebook — groupes quasi-déserts conçus pour intercepter les propriétaires d'animaux</div>
+    <div class="grid3">
+        <div class="item-card">
+            <div class="item-num">01</div>
+            <div class="item-titre">Petfood Score Petfood Advisor ®</div>
+            <div class="item-detail">360 membres</div>
+            <a class="item-lien" href="https://www.facebook.com/groups/tableaux.de.classement.de.croquettes.et.patees" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">02</div>
+            <div class="item-titre">Nutrition des chiens et chats - Petfood Advisor</div>
+            <div class="item-detail">121 membres</div>
+            <a class="item-lien" href="https://www.facebook.com/groups/petfood.advisor/" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">03</div>
+            <div class="item-titre">Petfood Advisor ® Le réseau social</div>
+            <div class="item-detail">6 membres</div>
+            <a class="item-lien" href="https://www.facebook.com/groups/petfoodadvisor.francophone/" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">04</div>
+            <div class="item-titre">Petfood Advisor - the social network (EN)</div>
+            <div class="item-detail">19 membres</div>
+            <a class="item-lien" href="https://www.facebook.com/groups/scores.et.tableaux.de.classement.en.petfood" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">05</div>
+            <div class="item-titre">Alerte croquettes</div>
+            <div class="item-detail rouge">Usurpation du nom — 60 membres</div>
+            <a class="item-lien" href="https://www.facebook.com/groups/560779718056675" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">06</div>
+            <div class="item-titre">Croquettes : toxiques ou pas ?</div>
+            <div class="item-detail">31 membres</div>
+            <a class="item-lien" href="https://www.facebook.com/groups/961252504709335" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">07</div>
+            <div class="item-titre">Infox, avis.... sur les croquettes que l'on trouve sur FB</div>
+            <div class="item-detail">138 membres</div>
+            <a class="item-lien" href="https://www.facebook.com/groups/262995862136588" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">08</div>
+            <div class="item-titre">Petfood et Intelligence artificielle : Fake News</div>
+            <div class="item-detail">8 membres</div>
+            <a class="item-lien" href="https://www.facebook.com/groups/478011760290846" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">09</div>
+            <div class="item-titre">Petfood Score International</div>
+            <div class="item-detail">149 membres</div>
+            <a class="item-lien" href="https://www.facebook.com/groups/petfood.score.international" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">10</div>
+            <div class="item-titre">Pet-food.io International</div>
+            <div class="item-detail">1 membre</div>
+            <a class="item-lien" href="https://www.facebook.com/groups/7086579571383049/" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">11</div>
+            <div class="item-titre">Rentork - Food - Petfood - Health - Beauty</div>
+            <div class="item-detail">3 membres</div>
+            <a class="item-lien" href="https://www.facebook.com/groups/rentork" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">12</div>
+            <div class="item-titre">Petfood-advisor — Nutrition animale CN</div>
+            <div class="item-detail">43 membres</div>
+            <a class="item-lien" href="https://www.facebook.com/groups/1598591773877261" target="_blank">Voir →</a>
+        </div>
+    </div>
+
+    <!-- SECTION 3 : PAGES FACEBOOK -->
+    <div class="section-title">Pages Facebook <span class="section-count">10 pages</span></div>
+    <div class="section-subtitle">Multiplication des pages fantômes pour saturer les recherches</div>
+    <div class="grid3">
+        <div class="item-card">
+            <div class="item-num">01</div>
+            <div class="item-titre">Petfood Advisor International</div>
+            <div class="item-detail">1 follower</div>
+            <a class="item-lien" href="https://www.facebook.com/profile.php?id=100076475286537" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">02</div>
+            <div class="item-titre">Pet Food Alert France</div>
+            <div class="item-detail">12 followers</div>
+            <a class="item-lien" href="https://www.facebook.com/PetFoodAlertFrance" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">03</div>
+            <div class="item-titre">Petfood Academy</div>
+            <div class="item-detail">11 followers</div>
+            <a class="item-lien" href="https://www.facebook.com/profile.php?id=61551477937054" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">04</div>
+            <div class="item-titre">Petfood-Advisor 01</div>
+            <div class="item-detail">2 followers</div>
+            <a class="item-lien" href="https://www.facebook.com/profile.php?id=100067755306743" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">05</div>
+            <div class="item-titre">Petfood Advisor 02</div>
+            <div class="item-detail">8 followers</div>
+            <a class="item-lien" href="https://www.facebook.com/profile.php?id=100067855112481" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">06</div>
+            <div class="item-titre">Petfood Advisor 03</div>
+            <div class="item-detail">6 followers</div>
+            <a class="item-lien" href="https://www.facebook.com/profile.php?id=100085662829364" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">07</div>
+            <div class="item-titre">Petfood Advisor CN</div>
+            <div class="item-detail">6 followers</div>
+            <a class="item-lien" href="https://www.facebook.com/profile.php?id=100068009738199" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">08</div>
+            <div class="item-titre">Petfood Score Pacta</div>
+            <div class="item-detail">24 followers</div>
+            <a class="item-lien" href="https://www.facebook.com/petfood.score" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">09</div>
+            <div class="item-titre">Pour un Petfood-Score Pacta éthique</div>
+            <div class="item-detail">15 followers</div>
+            <a class="item-lien" href="https://www.facebook.com/profile.php?id=100090750866473" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">10</div>
+            <div class="item-titre">Sos Petfood - International</div>
+            <div class="item-detail">0 follower</div>
+            <a class="item-lien" href="https://www.facebook.com/profile.php?id=100078716322911" target="_blank">Voir →</a>
+        </div>
+    </div>
+
+    <!-- SECTION 4 : PÉTITIONS -->
+    <div class="section-title">Pétitions <span class="section-count">9 pétitions</span></div>
+    <div class="section-subtitle">Dont 2 pétitions ayant recueilli plus de 12 000 signatures en usurpant l'identité de Gilles Vouillon</div>
+    <div class="grid2">
+        <div class="item-card usurpation">
+            <div class="badge-usurpation">⚠️ Usurpation d'identité — 11 404 signatures</div>
+            <div class="item-titre">Informez vos proches sur le véritable SCANDALE des croquettes réellement toxiques</div>
+            <div class="item-detail rouge">Pétition toujours ouverte — les signataires croyaient signer pour Gilles Vouillon</div>
+            <a class="item-lien" href="https://www.change.org/p/informez-vos-proches-sur-le-v%C3%A9ritable-scandale-des-croquettes-r%C3%A9ellement-toxiques" target="_blank">Voir la pétition →</a>
+        </div>
+        <div class="item-card usurpation">
+            <div class="badge-usurpation">⚠️ Usurpation d'identité — 1 272 signatures</div>
+            <div class="item-titre">Fausse alerte croquette toxiques Purizon : remboursez les frais !</div>
+            <div class="item-detail rouge">Pétition toujours ouverte — les signataires croyaient que c'était Gilles Vouillon</div>
+            <a class="item-lien" href="https://www.mypetition.org/petition/animaux/fausse-alerte-croquette-toxiques-purizon-remboursez/132838" target="_blank">Voir la pétition →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">03</div>
+            <div class="item-titre">Soutien aux lanceurs d'alerte en Petfood</div>
+            <div class="item-detail">Pétition fermée — 0 signature</div>
+            <a class="item-lien" href="https://www.change.org/p/soutien-aux-lanceurs-d-alerte-en-petfood" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">04</div>
+            <div class="item-titre">Petfood : Imposons le détail des glucides sur les paquets</div>
+            <div class="item-detail">Pétition fermée — 0 signature</div>
+            <a class="item-lien" href="https://www.change.org/p/petfood-imposons-le-d%C3%A9tail-des-glucides-sur-les-paquets-de-croquettes-de-nos-animaux" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">05</div>
+            <div class="item-titre">Soutien à Gilles Vouillon contre le Petfood score Pacta</div>
+            <div class="item-detail">Toujours ouverte — 1 signature</div>
+            <a class="item-lien" href="https://secure.avaaz.org/community_petitions/fr/Le_gouvernement_Soutien_a_Gilles_Vouillon_contre_ses_proces_Dry_Croquets_Challenge/" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">06</div>
+            <div class="item-titre">Petfood-Score Pacta Petfood : le groupe Facebook recommande des croquettes TOXIQUES !</div>
+            <div class="item-detail">Toujours ouverte — 24 signatures</div>
+            <a class="item-lien" href="https://www.mypetition.org/petition/animaux/petfood-score-pacta-petfood-groupe-facebook/72754" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">07</div>
+            <div class="item-titre">Soutien aux vétérinaires : pour la protection de ceux qui protègent nos animaux</div>
+            <div class="item-detail">Pétition fermée — 1 signature</div>
+            <a class="item-lien" href="https://www.change.org/p/soutien-aux-v%C3%A9t%C3%A9rinaires-pour-la-protection-de-ceux-qui-prot%C3%A8gent-nos-animaux" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">08</div>
+            <div class="item-titre">Exiger l'affichage des glucides sur les croquettes pour animaux</div>
+            <div class="item-detail">Pétition fermée — 3 signatures</div>
+            <a class="item-lien" href="https://www.change.org/p/exiger-l-affichage-des-glucides-sur-les-croquettes-pour-animaux" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">09</div>
+            <div class="item-titre">Pétition supprimée à la demande de Gilles Vouillon</div>
+            <div class="item-detail">Fermée — 5 signatures</div>
+            <a class="item-lien" href="https://www.change.org/p/faut-il-donner-plus-d-explications" target="_blank">Voir →</a>
+        </div>
+    </div>
+
+    <!-- SECTION 5 : BLOGS & AUTRES -->
+    <div class="section-title">Blogs, Podcast &amp; Autres <span class="section-count">3 blogs + 1 podcast</span></div>
+    <div class="grid3">
+        <div class="item-card">
+            <div class="item-num">01</div>
+            <div class="item-titre">PetfoodAdvisor — Blog principal</div>
+            <a class="item-lien" href="https://petfood-advisor.fr/" target="_blank">Voir le blog →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">02</div>
+            <div class="item-titre">Télégram — « Affaire Gilles Vouillon »</div>
+            <div class="item-detail rouge">Campagne de dénigrement nominative</div>
+            <a class="item-lien" href="https://telegra.ph/Affaire-Gilles-Vouillon-Alerte-Croquettes-Toxiques--le-plan-du-blog-03-31" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">03</div>
+            <div class="item-titre">Blog nutrition animale</div>
+            <a class="item-lien" href="https://petfood-advisor.fr/nutrition-animale/" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">04</div>
+            <div class="item-titre">Podcast SoundCloud — dénigrement de Gilles Vouillon</div>
+            <a class="item-lien" href="https://soundcloud.com/alainstevens/presentation-de-lapplication-rentork-evaluez-vos-croquettes-et-patees" target="_blank">Écouter →</a>
+        </div>
+    </div>
+
+    <!-- SECTION 6 : LIVRES -->
+    <div class="section-title">Livres &amp; Livrets <span class="section-count">6 livres Amazon + 2 livrets</span></div>
+    <div class="section-subtitle">Vendus sur Amazon et distribués gratuitement pour asseoir une fausse légitimité</div>
+    <div class="grid3">
+        <div class="item-card">
+            <div class="item-num">Livret 01</div>
+            <div class="item-titre">Quelles croquettes pour nos bêtes (69 pages)</div>
+            <div class="item-detail">Distribué gratuitement sur ses pétitions</div>
+            <a class="item-lien" href="https://drive.google.com/file/d/1h1qEnSui1MltLh7AZGBsIHEyDhXPWREf/view" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">Livret 02</div>
+            <div class="item-titre">Enquête sur la Mafia du Petfood (84 pages)</div>
+            <div class="item-detail">Distribué gratuitement sur ses pétitions</div>
+            <a class="item-lien" href="https://drive.google.com/file/d/125MfPLVw95tbvGY0lnfjnYZCqmetO3dK/view" target="_blank">Voir →</a>
+        </div>
+        <div class="item-card">
+            <div class="item-num">Livres Amazon</div>
+            <div class="item-titre">6 livres vendus sur Amazon — page auteur</div>
+            <a class="item-lien" href="https://www.amazon.fr/stores/Alain-Stevens/author/B004MT2RTW" target="_blank">Voir sur Amazon →</a>
+        </div>
+    </div>
+
+    <!-- QUESTION FINALE -->
+    <div class="question-finale">
+        <div class="question-finale-titre">La Question qui reste sans réponse</div>
+        <div class="question-finale-texte">
+            Alain Stevens — <strong>15 chaînes YouTube</strong>, <strong>13 groupes Facebook</strong>, <strong>10 pages Facebook</strong>, <strong>9 pétitions</strong>, <strong>6 livres</strong>, une <strong>marque parasite déposée à l'INPI</strong>, des comptes sur tous les réseaux sociaux...<br><br>
+            ...tout cela pour <em>invisibiliser et discréditer</em> le travail d'un seul homme et de 150 000 résistants bénévoles.<br><br>
+            <strong>T'es payé par qui, Alain Stevens ? Et combien ?</strong>
+        </div>
+        <div class="question-finale-verdict">Qui finance la contre-résistance de la petfood pathétique ?</div>
+    </div>
+
+
+    <!-- FICHE MILICIEN 02 : ACT SAC À VOMI -->
+    <div class="fiche-identite" style="margin-top:3rem;">
+        <div class="fiche-numero">02</div>
+        <div class="fiche-content">
+            <div class="fiche-nom">ACT Sac à Vomi</div>
+            <div class="fiche-titre">Page Facebook — que Gilles Vouillon appelle « ACT Sac à Vomi » — de dénigrement systématique — Administrateur(s) inconnu(s)</div>
+            <div class="fiche-texte">
+                Depuis <strong>plus de 6 ans</strong>, cette page Facebook mène une campagne ininterrompue de dénigrement contre Gilles Vouillon et le Petfood-score ABCDE®.<br><br>
+                Des <strong>centaines de milliers de publications</strong> produites dans le seul but d'invisibiliser et discréditer le travail de la résistance éthique — un record d'acharnement qui place cette page au même niveau de nuisance organisée qu'Alain Stevens.<br><br>
+                Il est notable qu'<strong>Alain Stevens figure parmi les commentateurs les plus actifs</strong> de cette page depuis ses débuts — un lien entre les deux qui mérite d'être signalé.<br><br>
+                <em>L'identité de l'administrateur ou des administrateurs de cette page n'est pas publiquement confirmée à ce jour. La question reste posée : qui se cache derrière ACT Sac à Vomi ?</em>
+            </div>
+            <a class="ramirez-btn" href="https://www.facebook.com/profile.php?id=100063584764363" target="_blank">🔍 Voir la page Facebook ACT Sac à Vomi</a>
+        </div>
+    </div>
+
+    <!-- QUESTION CENTRALE 02 -->
+    <div class="question-finale" style="margin-top:1.5rem; margin-bottom:2.5rem;">
+        <div class="question-finale-titre">La Question qui reste sans réponse</div>
+        <div class="question-finale-texte">
+            <strong>6 ans</strong> de dénigrement ininterrompu. <strong>Des centaines de milliers de publications.</strong><br>
+            Un acharnement qui dépasse largement le cadre d'une simple critique.<br><br>
+            <em>Qui administre ACT Sac à Vomi ? Et pourquoi un tel acharnement ?</em>
+        </div>
+        <div class="question-finale-verdict">Qui se cache derrière ACT Sac à Vomi ?</div>
+    </div>
+
+    <div style="text-align:center; margin: 2rem 0;">
+        <a class="retour-btn" href="petfood_score_v34_dark.html" style="margin-right:16px;">← Page 1 — L'Appel du 19 Juin</a>
+        <a class="retour-btn" href="appel_19_juin_page3_qui_est_qui.html" style="background:#d4ac0d; color:#000;">Page 2 — Qui est Qui ? →</a>
+    </div>
+
+    <div class="page-footer">
+        Page 2 de l'Appel du 19 Juin — Fait à Castres le 15 juin 2026 — Tous droits réservés.<br>
+        Tous les éléments présentés sont publiquement vérifiables via les liens fournis.<br>
+        Autorisation est donnée de partager cette page à la condition qu'aucune modification ne soit apportée.
+    </div>
+
+</div>
+</div>
+</div>
+
+<!-- BARRE — dans un dialog natif du navigateur, au-dessus de tout -->
+<dialog id="DLG" style="
+    position:fixed;
+    bottom:0;top:auto;
+    left:0;right:0;
+    width:100%;
+    height:56px;
+    margin:0;padding:0;
+    background:#080600;
+    border:none;
+    border-top:2px solid #3a2a00;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    max-width:100%;
+    z-index:2147483647;
+">
+    <span style="font-size:0.72rem;color:#444;text-transform:uppercase;letter-spacing:0.08em;">⚔️ L'Appel du 19 Juin :</span>
+    <button onclick="NAV(1)" style="font-size:0.8rem;font-weight:bold;padding:7px 14px;border-radius:99px;cursor:pointer;background:#d4ac0d;color:#000;border:2px solid #fff;">📊 Les Compteurs</button>
+    <button onclick="NAV(2)" style="font-size:0.8rem;font-weight:bold;padding:7px 14px;border-radius:99px;cursor:pointer;background:#0a2a15;color:#27ae60;border:1px solid #27ae60;">🎭 Qui est Qui ?</button>
+    <button onclick="NAV(3)" style="font-size:0.8rem;font-weight:bold;padding:7px 14px;border-radius:99px;cursor:pointer;background:#2a0000;color:#e74c3c;border:1px solid #8b0000;">🔍 Les Miliciens</button>
+</dialog>
+
+<script>
+// Ouvrir le dialog comme barre fixe
+var dlg = document.getElementById('DLG');
+dlg.show(); // show() pas showModal() — pas de backdrop
+
+// Navigation
+function NAV(n) {
+    ['PG1','PG2','PG3'].forEach(function(id,i) {
+        var el = document.getElementById(id);
+        el.className = 'PG' + (i+1===n?' ON':'');
+    });
+    document.getElementById('WRAP').scrollTop = 0;
+
+    // Mettre à jour boutons
+    var btns = dlg.querySelectorAll('button');
+    var styles = [
+        {on:'background:#d4ac0d;color:#000;border:2px solid #fff;',
+          off:'background:#2a2000;color:#d4ac0d;border:1px solid #d4ac0d;'},
+        {on:'background:#27ae60;color:#000;border:2px solid #fff;',
+          off:'background:#0a2a15;color:#27ae60;border:1px solid #27ae60;'},
+        {on:'background:#8b0000;color:#fff;border:2px solid #fff;',
+          off:'background:#2a0000;color:#e74c3c;border:1px solid #8b0000;'}
+    ];
+    btns.forEach(function(b,i) {
+        b.style.cssText = 'font-size:0.8rem;font-weight:bold;padding:7px 14px;border-radius:99px;cursor:pointer;' + (i===n-1 ? styles[i].on : styles[i].off);
+    });
+
+    // Réouvrir le dialog si fermé
+    if(!dlg.open) dlg.show();
+}
+
+// Surveillance — réouvrir si fermé accidentellement
+setInterval(function(){
+    if(!dlg.open) dlg.show();
+}, 200);
+
+// JS compteurs
+
+    function copierCode() {
+        const code = document.documentElement.outerHTML;
+        navigator.clipboard.writeText(code).then(() => alert('Code copié dans le presse-papiers !'));
+    }
+    const caJournalier         = 13150685;
+    const eurosParSeconde      = caJournalier / 86400;
+    const ratio                = 0.9;
+    const tauxTva              = 0.20;
+    const c_total_sec          = 1800000     / (365 * 24 * 3600);
+    const c_malbouffe_sec      = 1200000     / (365 * 24 * 3600);
+    const c_eco_carnage_sec    = 4200000000  / (365 * 24 * 3600);
+    const c_economie_sec       = 75000000    / (365 * 24 * 3600);
+    const c_eco_general_sec    = 6000000000  / (365 * 24 * 3600);
+    const base_cliniques_fr    = 330;
+    const base_cliniques_monde = 3100;
+    const taux_rachat_fr_sec   = 14  / (30.44 * 24 * 3600);
+    const taux_rachat_monde_sec = 140 / (30.44 * 24 * 3600);
+    const base_collab_monde     = 32000;
+    const taux_collab_sec       = 140 / (30.44 * 24 * 3600);
+    const debut_compteur       = new Date('2026-06-12T00:00:00Z').getTime();
+    const f_dec10 = new Intl.NumberFormat('fr-FR', { minimumFractionDigits: 10, maximumFractionDigits: 10 });
+    const f_euro  = new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
+    const f_int   = v => Math.floor(v).toLocaleString('fr-FR') + ' €';
+
+    function updateP1() {
+        const n      = new Date();
+        const t      = n.getTime();
+        const minuit = new Date(n.getFullYear(), n.getMonth(), n.getDate()).getTime();
+        const s_jour = (t - minuit) / 1000;
+        const s_2026 = (t - new Date('2026-01-01T00:00:00Z').getTime()) / 1000;
+        const s_2025 = (t - new Date('2025-01-01T00:00:00Z').getTime()) / 1000;
+        const s_dep  = (t - debut_compteur) / 1000;
+        const v1 = s_jour * eurosParSeconde;
+        const v2 = s_2026 * eurosParSeconde;
+        const v3 = s_2025 * eurosParSeconde;
+        document.getElementById('c1').innerText   = f_int(v1);
+        document.getElementById('cp1').innerText  = f_int(v1 * ratio);
+        document.getElementById('tva1').innerText = f_int(v1 * ratio * tauxTva);
+        document.getElementById('c2').innerText   = f_int(v2);
+        document.getElementById('cp2').innerText  = f_int(v2 * ratio);
+        document.getElementById('tva2').innerText = f_int(v2 * ratio * tauxTva);
+        document.getElementById('c3').innerText   = f_int(v3);
+        document.getElementById('cp3').innerText  = f_int(v3 * ratio);
+        document.getElementById('tva3').innerText = f_int(v3 * ratio * tauxTva);
+        document.getElementById('eco-general-jour').innerText  = f_euro.format(s_jour * c_eco_general_sec);
+        document.getElementById('eco-general-an').innerText    = f_euro.format(s_2026 * c_eco_general_sec);
+        document.getElementById('eco-general-5ans').innerText  = f_euro.format(s_2025 * c_eco_general_sec);
+        const carnage_jour = s_jour * c_eco_carnage_sec;
+        const carnage_an   = s_2026 * c_eco_carnage_sec;
+        const carnage_5ans = s_2025 * c_eco_carnage_sec;
+        document.getElementById('eco-carnage-jour').innerText  = f_euro.format(carnage_jour);
+        document.getElementById('eco-carnage-an').innerText    = f_euro.format(carnage_an);
+        document.getElementById('eco-carnage-5ans').innerText  = f_euro.format(carnage_5ans);
+        const tva3_jour = carnage_jour * tauxTva;
+        const tva3_an   = carnage_an   * tauxTva;
+        const tva3_5ans = carnage_5ans * tauxTva;
+        document.getElementById('tva-carnage-jour').innerText  = f_euro.format(tva3_jour);
+        document.getElementById('tva-carnage-an').innerText    = f_euro.format(tva3_an);
+        document.getElementById('tva-carnage-5ans').innerText  = f_euro.format(tva3_5ans);
+        const tva1_jour = v1 * ratio * tauxTva;
+        const tva1_an   = v2 * ratio * tauxTva;
+        const tva1_5ans = v3 * ratio * tauxTva;
+        document.getElementById('tva1-recap-jour').innerText   = f_euro.format(tva1_jour);
+        document.getElementById('tva1-recap-an').innerText     = f_euro.format(tva1_an);
+        document.getElementById('tva1-recap-5ans').innerText   = f_euro.format(tva1_5ans);
+        document.getElementById('tva3-recap-jour').innerText   = f_euro.format(tva3_jour);
+        document.getElementById('tva3-recap-an').innerText     = f_euro.format(tva3_an);
+        document.getElementById('tva3-recap-5ans').innerText   = f_euro.format(tva3_5ans);
+        document.getElementById('tva-total-jour').innerText    = f_euro.format(tva1_jour + tva3_jour);
+        document.getElementById('tva-total-an').innerText      = f_euro.format(tva1_an   + tva3_an);
+        document.getElementById('tva-total-5ans').innerText    = f_euro.format(tva1_5ans + tva3_5ans);
+        document.getElementById('petfood-jour').innerText    = f_dec10.format(s_jour * c_malbouffe_sec);
+        document.getElementById('total-jour').innerText      = f_dec10.format(s_jour * c_total_sec);
+        document.getElementById('petfood-annuel').innerText  = f_dec10.format(s_2026 * c_malbouffe_sec);
+        document.getElementById('total-annuel').innerText    = f_dec10.format(s_2026 * c_total_sec);
+        document.getElementById('petfood-18mois').innerText  = f_dec10.format(s_2025 * c_malbouffe_sec);
+        document.getElementById('total-18mois').innerText    = f_dec10.format(s_2025 * c_total_sec);
+        document.getElementById('eco-ethique-jour').innerText  = f_euro.format(s_jour * c_economie_sec);
+        document.getElementById('eco-ethique-an').innerText    = f_euro.format(s_2026 * c_economie_sec);
+        document.getElementById('eco-ethique-5ans').innerText  = f_euro.format(s_2025 * c_economie_sec);
+        document.getElementById('cliniques-fr').innerText    = f_dec10.format(base_cliniques_fr    + s_dep * taux_rachat_fr_sec);
+        document.getElementById('cliniques-monde').innerText = f_dec10.format(base_cliniques_monde + s_dep * taux_rachat_monde_sec);
+        document.getElementById('collab-monde').innerText    = f_dec10.format(base_collab_monde    + s_dep * taux_collab_sec);
+    }
+    setInterval(updateP1, 50);
+    updateP1();
+
+</script>
 
 </body></html>
